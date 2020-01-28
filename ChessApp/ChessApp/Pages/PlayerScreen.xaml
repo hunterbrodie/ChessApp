@@ -8,20 +8,30 @@
              x:Class="ChessApp.Pages.PlayerScreen">
     <ContentPage.Content>
         <Frame>
-            <StackLayout>
-                <Label x:Name="pTitle" Text="Test" />
-                <Label x:Name="pSubtitle" Text="Test" />
-                <microcharts:ChartView x:Name="playerRatingChart" />
-                <ListView x:Name="pGamesListView"  >
-                    <ListView.ItemTemplate>
-                        <DataTemplate>
-                            <TextCell Text="{Binding Disp}"
-                                      Detail="{Binding gDate}" />
-                        </DataTemplate>
-                    </ListView.ItemTemplate>
-                </ListView>
-                <Button x:Name="DeletePlayer" Clicked="DeletePlayer_Clicked" Text="Delete Player" VerticalOptions="EndAndExpand" BackgroundColor="Red" Margin="8" />
-            </StackLayout>
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="2*" />
+                    <RowDefinition Height="3*" />
+                    <RowDefinition Height="8*" />
+                </Grid.RowDefinitions>
+                <StackLayout>
+                    <Label x:Name="pTitle" Text="Test" />
+                    <Label x:Name="pSubtitle" Text="Test" />
+                </StackLayout>
+                
+                <microcharts:ChartView x:Name="playerRatingChart" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Grid.Row="1" />
+                <StackLayout Grid.Row="2">
+                    <ListView x:Name="pGamesListView" ItemSelected="pGamesListView_ItemSelected">
+                        <ListView.ItemTemplate>
+                            <DataTemplate>
+                                <TextCell Text="{Binding Disp}"
+                                          Detail="{Binding gDate}" />
+                            </DataTemplate>
+                        </ListView.ItemTemplate>
+                    </ListView>
+                    <Button x:Name="DeletePlayer" Clicked="DeletePlayer_Clicked" Text="Delete Player" VerticalOptions="EndAndExpand" BackgroundColor="Red" Margin="8" />
+                </StackLayout>
+            </Grid>
         </Frame>
     </ContentPage.Content>
 </ContentPage>

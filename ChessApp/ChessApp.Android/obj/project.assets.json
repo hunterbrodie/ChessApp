@@ -2,6 +2,20 @@
   "version": 3,
   "targets": {
     "MonoAndroid,Version=v9.0": {
+      "Microcharts/0.7.1": {
+        "type": "package",
+        "dependencies": {
+          "SkiaSharp.Views": "1.59.1.1"
+        },
+        "compile": {
+          "lib/MonoAndroid10/Microcharts.Droid.dll": {},
+          "lib/MonoAndroid10/Microcharts.dll": {}
+        },
+        "runtime": {
+          "lib/MonoAndroid10/Microcharts.Droid.dll": {},
+          "lib/MonoAndroid10/Microcharts.dll": {}
+        }
+      },
       "Microcharts.Forms/0.7.1": {
         "type": "package",
         "dependencies": {
@@ -934,6 +948,7 @@
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
+          "Microcharts": "0.7.1",
           "Microcharts.Forms": "0.7.1",
           "Xamarin.Essentials": "1.3.1",
           "Xamarin.Forms": "4.3.0.908675",
@@ -949,6 +964,26 @@
     }
   },
   "libraries": {
+    "Microcharts/0.7.1": {
+      "sha512": "Py79bYXqvsqthZtk1ChdDhy/n4mb7T2CKjzTVU7ldj4dnjgFC2nbOJMGeAJkDk1lZPoQPSPx3obSq7S29Zrt8g==",
+      "type": "package",
+      "path": "microcharts/0.7.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/MonoAndroid10/Microcharts.Droid.dll",
+        "lib/MonoAndroid10/Microcharts.dll",
+        "lib/Xamarin.iOS10/Microcharts.dll",
+        "lib/Xamarin.iOS10/Microcharts.iOS.dll",
+        "lib/netstandard1.4/Microcharts.dll",
+        "lib/uap/Microcharts.Uwp.dll",
+        "lib/uap/Microcharts.dll",
+        "lib/xamarinmac/Microcharts.dll",
+        "lib/xamarinmac/Microcharts.macOS.dll",
+        "microcharts.0.7.1.nupkg.sha512",
+        "microcharts.nuspec"
+      ]
+    },
     "Microcharts.Forms/0.7.1": {
       "sha512": "/oeY4j/x3I8PY6sNV3B6CHKdvZl3cJHxfkxIKSPaX86bc50mq1C0L+LqVnbRMwMa1PpywPtwL1+aqlKGM8bL3w==",
       "type": "package",

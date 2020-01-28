@@ -75,7 +75,8 @@
         "outputPath": "C:\\Users\\Hunter\\Documents\\GitHub\\ChessApp\\ChessApp\\ChessApp\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Microsoft\\Xamarin\\NuGet\\"
+          "C:\\Microsoft\\Xamarin\\NuGet\\",
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
           "C:\\Users\\Hunter\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -103,6 +104,10 @@
       "frameworks": {
         "netstandard2.0": {
           "dependencies": {
+            "Microcharts": {
+              "target": "Package",
+              "version": "[0.7.1, )"
+            },
             "Microcharts.Forms": {
               "target": "Package",
               "version": "[0.7.1, )"

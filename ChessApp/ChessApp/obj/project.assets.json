@@ -2,6 +2,19 @@
   "version": 3,
   "targets": {
     ".NETStandard,Version=v2.0": {
+      "Microcharts/0.7.1": {
+        "type": "package",
+        "dependencies": {
+          "SkiaSharp": "1.59.1",
+          "System.ValueTuple": "4.4.0"
+        },
+        "compile": {
+          "lib/netstandard1.4/Microcharts.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.4/Microcharts.dll": {}
+        }
+      },
       "Microcharts.Forms/0.7.1": {
         "type": "package",
         "dependencies": {
@@ -166,6 +179,26 @@
     }
   },
   "libraries": {
+    "Microcharts/0.7.1": {
+      "sha512": "Py79bYXqvsqthZtk1ChdDhy/n4mb7T2CKjzTVU7ldj4dnjgFC2nbOJMGeAJkDk1lZPoQPSPx3obSq7S29Zrt8g==",
+      "type": "package",
+      "path": "microcharts/0.7.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/MonoAndroid10/Microcharts.Droid.dll",
+        "lib/MonoAndroid10/Microcharts.dll",
+        "lib/Xamarin.iOS10/Microcharts.dll",
+        "lib/Xamarin.iOS10/Microcharts.iOS.dll",
+        "lib/netstandard1.4/Microcharts.dll",
+        "lib/uap/Microcharts.Uwp.dll",
+        "lib/uap/Microcharts.dll",
+        "lib/xamarinmac/Microcharts.dll",
+        "lib/xamarinmac/Microcharts.macOS.dll",
+        "microcharts.0.7.1.nupkg.sha512",
+        "microcharts.nuspec"
+      ]
+    },
     "Microcharts.Forms/0.7.1": {
       "sha512": "/oeY4j/x3I8PY6sNV3B6CHKdvZl3cJHxfkxIKSPaX86bc50mq1C0L+LqVnbRMwMa1PpywPtwL1+aqlKGM8bL3w==",
       "type": "package",
@@ -865,6 +898,7 @@
   },
   "projectFileDependencyGroups": {
     ".NETStandard,Version=v2.0": [
+      "Microcharts >= 0.7.1",
       "Microcharts.Forms >= 0.7.1",
       "NETStandard.Library >= 2.0.3",
       "Xamarin.Essentials >= 1.3.1",
@@ -874,7 +908,8 @@
   },
   "packageFolders": {
     "C:\\Users\\Hunter\\.nuget\\packages\\": {},
-    "C:\\Microsoft\\Xamarin\\NuGet\\": {}
+    "C:\\Microsoft\\Xamarin\\NuGet\\": {},
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
@@ -886,7 +921,8 @@
       "outputPath": "C:\\Users\\Hunter\\Documents\\GitHub\\ChessApp\\ChessApp\\ChessApp\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "C:\\Microsoft\\Xamarin\\NuGet\\"
+        "C:\\Microsoft\\Xamarin\\NuGet\\",
+        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
         "C:\\Users\\Hunter\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -914,6 +950,10 @@
     "frameworks": {
       "netstandard2.0": {
         "dependencies": {
+          "Microcharts": {
+            "target": "Package",
+            "version": "[0.7.1, )"
+          },
           "Microcharts.Forms": {
             "target": "Package",
             "version": "[0.7.1, )"

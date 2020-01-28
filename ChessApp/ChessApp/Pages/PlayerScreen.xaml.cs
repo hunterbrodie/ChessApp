@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 using ChessApp.Classes;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using Microcharts.Forms;
+using SkiaSharp;
+using Microcharts;
 
 namespace ChessApp.Pages
 {
@@ -36,7 +39,6 @@ namespace ChessApp.Pages
         {
             base.OnAppearing();
 
-
             List<Game> allGames = await App.Database.GetGameListAsync();
             for (int x = 0; x < allGames.Count; x++)
             {
@@ -46,8 +48,32 @@ namespace ChessApp.Pages
                     x--;
                 }
             }
-            pGamesListView.ItemsSource = allGames.OrderByDescending(g => g.gDate);
-            //https://github.com/dotnet-ad/Microcharts/blob/master/Documentation/guides/quickstart.md
+            allGames.OrderByDescending(g => g.gDate);
+            pGamesListView.ItemsSource = allGames;
+            
+            List<Microcharts.Entry> entries = new List<Microcharts.Entry>();
+
+            allGames = oneGameDay(allGames);
+            allGames.OrderBy(g => g.gDate);
+
+            foreach (Game _game in allGames)
+            {
+                double rating = _game.p1Rating;
+
+                if (_game.p2ID == _player.ID)
+                {
+                    rating = _game.p2Rating;
+                }
+
+                entries.Add(new Microcharts.Entry((float)(rating))
+                {
+                    Label = _game.gDate.ToShortDateString(),
+                    ValueLabel = rating.ToString(),
+                });
+            }
+
+            playerRatingChart.Chart = new LineChart() { Entries = entries };
+
         }
 
         private async void DeletePlayer_Clicked(object sender, EventArgs e)
@@ -57,6 +83,30 @@ namespace ChessApp.Pages
                 await App.Database.DeletePlayer(_player);
                 await DisplayAlert("Info", "Player deleted", "OK");
                 await Navigation.PopModalAsync();
+            }
+        }
+
+        private List<Game> oneGameDay(List<Game> gameList)
+        {
+            for (int x = 0; x < gameList.Count - 1; x++)
+            {
+                if (gameList[x].gDate.Date.Equals(gameList[x + 1].gDate.Date))
+                {
+                    gameList.RemoveAt(x + 1);
+                    x--;
+                }
+            }
+            return gameList;
+        }
+
+        private async void pGamesListView_ItemSelected(object sender, SelectedItemChangedEventArgs e)
+        {
+            if (await DisplayAlert("WARNING", "This delete the game, continue?", "Yes, delete", "Cancel"))
+            {
+                await App.Database.DeleteGame((Game)(pGamesListView.SelectedItem));
+                await DisplayAlert("Info", "Game deleted", "OK");
+                List<Game> _gameList = await App.Database.GetGameListAsync();
+                pGamesListView.ItemsSource = _gameList.OrderByDescending(p => p.gDate);
             }
         }
     }

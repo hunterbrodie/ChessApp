@@ -14,3 +14,4 @@ C:\Users\Hunter\Documents\GitHub\ChessApp\ChessApp\ChessApp\bin\Debug\netstandar
 C:\Users\Hunter\Documents\GitHub\ChessApp\ChessApp\ChessApp\obj\Debug\netstandard2.0\ChessApp.dll
 C:\Users\Hunter\Documents\GitHub\ChessApp\ChessApp\ChessApp\obj\Debug\netstandard2.0\ref\ChessApp.dll
 C:\Users\Hunter\Documents\GitHub\ChessApp\ChessApp\ChessApp\obj\Debug\netstandard2.0\ChessApp.pdb
+C:\Users\Hunter\Documents\GitHub\ChessApp\ChessApp\ChessApp\obj\Debug\netstandard2.0\XamlC.stamp

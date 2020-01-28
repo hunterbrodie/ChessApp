@@ -83,32 +83,31 @@ namespace ChessApp.Classes
         {
             List<Game> gameList = _database.Table<Game>().ToListAsync().Result.OrderBy(g => g.gDate).ToList();
             List<Player> playerList = _database.Table<Player>().ToListAsync().Result;
-            double[] ratings = new double[playerList.Count];
-            for (int x = 0; x < ratings.Length; x++)
+
+            for (int x  = 0; x < playerList.Count; x++)
             {
-                ratings[x] = 100;
+                playerList[x].Rating = 100;
             }
+
             for (int x = 0; x < gameList.Count; x++)
             {
-                int p1I = GetPlayerPosition(playerList, gameList[x].p1ID);
-                int p2I = GetPlayerPosition(playerList, gameList[x].p2ID);
+                int p1Pos = GetPlayerPosition(playerList, gameList[x].p1ID);
+                int p2Pos = GetPlayerPosition(playerList, gameList[x].p2ID);
 
-                gameList[x].p1Rating = ratings[p1I];
-                gameList[x].p2Rating = ratings[p2I];
+                gameList[x].p1Rating = playerList[p1Pos].Rating;
+                gameList[x].p2Rating = playerList[p2Pos].Rating;
 
-                double eA = 1 / (1 + Math.Pow(10, (playerList[p2I].Rating - playerList[p1I].Rating) / 40));
+                double eA = 1 / (1 + Math.Pow(10, (playerList[p2Pos].Rating - playerList[p1Pos].Rating) / 40));
                 double eB = 1 - eA;
-                eA = 8 * (gameList[x].p1Result - eA);
-                eB = 8 * ((1 - gameList[x].p1Result) - eB);
 
-                ratings[p1I] = Math.Round(gameList[x].p1Rating + eA, 2);
-                ratings[p2I] = Math.Round(gameList[x].p2Rating + eB, 2);
+                eA = Math.Round(8 * (gameList[x].p1Result - eA), 2);
+                eB = Math.Round(8 * ((1 - gameList[x].p1Result) - eB), 2);
+
+                playerList[p1Pos].Rating += eA;
+                playerList[p2Pos].Rating += eB;
 
             }
-            for (int x = 0; x < ratings.Length; x++)
-            {
-                playerList[x].Rating = Math.Round(ratings[x], 2);
-            }
+
             _database.UpdateAllAsync(gameList).Wait();
             return _database.UpdateAllAsync(playerList);
         }
