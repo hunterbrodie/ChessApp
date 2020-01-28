@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="ChessApp.Pages.Edit">
+    <ContentPage.Content>
+        <Frame>
+            <StackLayout>
+                <Label Text="Add Player" FontSize="Title" TextColor="Black" HorizontalOptions="Center" TextDecorations="Underline" />
+                <Entry  FontSize="Subtitle" x:Name="PlayerName" Placeholder="Player Name" Margin="4" />
+                <Button Text="Add Player" x:Name="AddPlayer" Clicked="AddPlayer_Clicked" Margin="4" />
+
+                <BoxView HorizontalOptions="FillAndExpand" HeightRequest="1" Color="Gray" Margin="4" />
+
+                <Label Text="Add Game" FontSize="Title" TextColor="Black" HorizontalOptions="Center" TextDecorations="Underline" />
+                <Picker FontSize="Subtitle" x:Name="Player1" Title="Player 1" Margin="4" >
+                    <Picker.ItemsSource>
+                    </Picker.ItemsSource>
+                </Picker>
+                <Picker FontSize="Subtitle" x:Name="Player2" Title="Player 2" Margin="4" >
+                    <Picker.ItemsSource>
+                    </Picker.ItemsSource>
+                </Picker>
+                <DatePicker Margin="4" x:Name="GameDate" />
+                <Button Text="Add Game" x:Name="AddGame" Clicked="AddGame_Clicked" Margin="4" />
+
+                <BoxView HorizontalOptions="FillAndExpand" HeightRequest="1" Color="Gray" Margin="4" />
+
+                <Button Text="Erase all data" x:Name="Erase" Clicked="Erase_Clicked" Margin="4" BackgroundColor="Red"/>
+
+            </StackLayout>
+        </Frame>
+    </ContentPage.Content>
+</ContentPage>
