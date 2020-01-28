@@ -14,7 +14,7 @@ namespace ChessApp.Classes
             get;
             set;
         }
-        public string gDate
+        public DateTime gDate
         {
             get;
             set;
@@ -48,22 +48,34 @@ namespace ChessApp.Classes
 
         public string Disp
         {
-            //get { return ToString(); }
-            get { return p1Rating + " beat " + p2Rating; }
+            get
+            {
+                string disp = "";
+
+                disp += App.Database.GetPlayerAsync(p1ID).Result.PName + " (" + p1Rating + ")";
+
+                if (p1Result == 1)
+                {
+                    disp += " won against ";
+                }
+                else if (p1Result == 0)
+                {
+                    disp += " lost to ";
+                }
+                else
+                {
+                    disp += " tied with ";
+                }
+
+                disp += App.Database.GetPlayerAsync(p2ID).Result.PName + " (" + p2Rating + ")";
+
+                return disp;
+            }
         }
 
         public override string ToString()
         {
-            return getDisp().Result;
-        }
-
-        public async Task<string> getDisp()
-        {
-            Player tempPlayer = await App.Database.GetPlayerAsync(p1ID);
-            string disp = tempPlayer.PName + " (" + p1Rating + ") " + " beat ";
-            tempPlayer = await App.Database.GetPlayerAsync(p2ID);
-            disp += tempPlayer.PName + " (" + p2Rating + ")";
-            return disp;
+            return Disp;
         }
 
     }

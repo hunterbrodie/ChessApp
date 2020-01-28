@@ -7,7 +7,7 @@
              x:Class="ChessApp.Pages.GameList">
     <ContentPage.Content>
         <Frame>
-            <ListView x:Name="gameView" >
+            <ListView x:Name="gameView" ItemSelected="gameView_ItemSelected">
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <TextCell Text="{Binding Disp}"

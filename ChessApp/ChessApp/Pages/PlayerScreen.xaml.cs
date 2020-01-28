@@ -12,11 +12,13 @@ namespace ChessApp.Pages
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class PlayerScreen : ContentPage
     {
+        private Player _player;
+
         public PlayerScreen()
         {
             InitializeComponent();
         }
-        private Player _player;
+
         public PlayerScreen(Player _player)
         {
             InitializeComponent();
@@ -44,15 +46,13 @@ namespace ChessApp.Pages
                     x--;
                 }
             }
-            allGames.Reverse();
-            pGamesListView.ItemsSource = allGames;
-
-            //pSubtitle.Text = allGames[0].ToString();
+            pGamesListView.ItemsSource = allGames.OrderByDescending(g => g.gDate);
+            //https://github.com/dotnet-ad/Microcharts/blob/master/Documentation/guides/quickstart.md
         }
 
         private async void DeletePlayer_Clicked(object sender, EventArgs e)
         {
-            if (await DisplayAlert("WARNING", "This delete the player, continue?", "Yes, I want to delete", "Cancel"))
+            if (await DisplayAlert("WARNING", "This delete the player, continue?", "Yes, delete", "Cancel"))
             {
                 await App.Database.DeletePlayer(_player);
                 await DisplayAlert("Info", "Player deleted", "OK");

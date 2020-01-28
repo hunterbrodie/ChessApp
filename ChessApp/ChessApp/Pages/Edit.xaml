@@ -19,11 +19,27 @@
                     <Picker.ItemsSource>
                     </Picker.ItemsSource>
                 </Picker>
+                <Picker FontSize="Subtitle" x:Name="Result" Title="Result" Margin="4" >
+                    <Picker.ItemsSource>
+                        <x:Array Type="{x:Type x:String}">
+                            <x:String>Won Against</x:String>
+                            <x:String>Tied With</x:String>
+                            <x:String>Lost To</x:String>
+                        </x:Array>
+                    </Picker.ItemsSource>
+                </Picker>
                 <Picker FontSize="Subtitle" x:Name="Player2" Title="Player 2" Margin="4" >
                     <Picker.ItemsSource>
                     </Picker.ItemsSource>
                 </Picker>
-                <DatePicker Margin="4" x:Name="GameDate" />
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition />
+                        <ColumnDefinition />
+                    </Grid.ColumnDefinitions>
+                    <DatePicker Margin="4" x:Name="GameDate" />
+                    <TimePicker Margin="4" x:Name="GameTime" Grid.Column="1" />
+                </Grid>
                 <Button Text="Add Game" x:Name="AddGame" Clicked="AddGame_Clicked" Margin="4" />
 
                 <BoxView HorizontalOptions="FillAndExpand" HeightRequest="1" Color="Gray" Margin="4" />

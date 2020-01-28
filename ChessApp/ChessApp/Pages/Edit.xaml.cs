@@ -21,6 +21,7 @@ namespace ChessApp.Pages
             base.OnAppearing();
             Player1.ItemsSource = await App.Database.GetPlayerListAsync();
             Player2.ItemsSource = await App.Database.GetPlayerListAsync();
+            GameTime.Time = DateTime.Now.TimeOfDay;
         }
 
         async void AddPlayer_Clicked(object sender, EventArgs e)
@@ -47,20 +48,20 @@ namespace ChessApp.Pages
             {
                 Player tempWinner = (Player)(Player1.SelectedItem);
                 Player tempLoser = (Player)(Player2.SelectedItem);
-                double p1Result = 1;
-                /*if (Result.SelectedItem.Equals("Won Against"))
+                double p1Result = .5;
+                if (Result.SelectedItem.Equals("Won Against"))
                 {
                     p1Result = 1;
                 }
                 else if (Result.SelectedItem.Equals("Lost To"))
                 {
                     p1Result = 0;
-                }*/
+                }
                 await App.Database.SaveGameAsync(new Game
                 {
                     p1ID = tempWinner.ID,
                     p2ID = tempLoser.ID,
-                    gDate = GameDate.Date.ToShortDateString(),
+                    gDate = GameDate.Date + GameTime.Time,
                     p1Rating = tempWinner.Rating,
                     p2Rating = tempLoser.Rating,
                     p1Result = p1Result
@@ -69,18 +70,9 @@ namespace ChessApp.Pages
                 GameDate.Date = DateTime.Now;
                 Player1.SelectedIndex = -1;
                 Player2.SelectedIndex = -1;
-                //Result.SelectedIndex = -1;
+                Result.SelectedIndex = -1;
 
-                int temp = await App.Database.RecalculateRatings();
-
-                /*double eA = 1 / (1 + Math.Pow(10, (tempLoser.Rating - tempWinner.Rating) / 40));
-                double eB = 1 - eA;
-
-                tempWinner.Rating = Math.Round(tempWinner.Rating + 16 * (1 - eA), 2);
-                tempLoser.Rating = Math.Round(tempLoser.Rating + 16 * (0 - eB), 2);
-
-                await App.Database.UpdatePlayerAsync(tempWinner);
-                await App.Database.UpdatePlayerAsync(tempLoser);*/
+                await App.Database.RecalculateRatings();
 
                 Player1.ItemsSource = await App.Database.GetPlayerListAsync();
                 Player2.ItemsSource = await App.Database.GetPlayerListAsync();
@@ -94,11 +86,13 @@ namespace ChessApp.Pages
 
         private async void Erase_Clicked(object sender, EventArgs e)
         {
-            if (await DisplayAlert("WARNING", "This will erase all data, continue?", "Yes, I want to erase", "Cancel"))
+            if (await DisplayAlert("WARNING", "This will erase all data, continue?", "Yes, erase", "Cancel"))
             {
                 await App.Database.ResetPlayerTable();
                 await App.Database.ResetGameTable();
                 await DisplayAlert("Info", "All data erased", "OK");
+                Player1.ItemsSource = await App.Database.GetPlayerListAsync();
+                Player2.ItemsSource = await App.Database.GetPlayerListAsync();
             }
         }
     }
