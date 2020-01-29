@@ -88,8 +88,8 @@ namespace ChessApp.Pages
         {
             if (await DisplayAlert("WARNING", "This will erase all data, continue?", "Yes, erase", "Cancel"))
             {
-                await App.Database.ResetPlayerTable();
-                await App.Database.ResetGameTable();
+                App.Database.ResetPlayerTable();
+                App.Database.ResetGameTable();
                 await DisplayAlert("Info", "All data erased", "OK");
                 Player1.ItemsSource = await App.Database.GetPlayerListAsync();
                 Player2.ItemsSource = await App.Database.GetPlayerListAsync();

@@ -48,31 +48,63 @@ namespace ChessApp.Pages
                     x--;
                 }
             }
-            allGames.OrderByDescending(g => g.gDate);
-            pGamesListView.ItemsSource = allGames;
+            pGamesListView.ItemsSource = allGames.OrderByDescending(g => g.gDate);
             
             List<Microcharts.Entry> entries = new List<Microcharts.Entry>();
 
             allGames = oneGameDay(allGames);
-            allGames.OrderBy(g => g.gDate);
+            allGames = allGames.OrderBy(g => g.gDate).ToList();
 
-            foreach (Game _game in allGames)
+            //double ratingCur = 100;
+
+            //if (Math.Abs(DateTime.Today.Month - allGames[0].gDate.Month) > 3)
+
+            /*for (DateTime date = allGames[0].gDate; date.Date <= DateTime.Today.Date; date = date.AddDays(7))
             {
-                double rating = _game.p1Rating;
-
-                if (_game.p2ID == _player.ID)
+                if (allGames.Count > 0 && date.Date == allGames[0].gDate.Date)
                 {
-                    rating = _game.p2Rating;
+                    ratingCur = allGames[0].p1Rating;
+
+                    if (allGames[0].p2ID == _player.ID)
+                    {
+                        ratingCur = allGames[0].p2Rating;
+                    }
+
+                    if (date.Day == 15)
+                    {
+                        entries.Add(new Microcharts.Entry((float)(ratingCur))
+                        {
+                            ValueLabel = ratingCur.ToString(),
+                            Color = SKColor.Parse("#ff0000"),
+                            Label = date.ToString("MMMM")
+                        });
+                    }
+                    else
+                    {
+                        entries.Add(new Microcharts.Entry((float)(ratingCur))
+                        {
+                            ValueLabel = ratingCur.ToString(),
+                            Color = SKColor.Parse("#ff0000")
+                        });
+                    }
+
+                    allGames.RemoveAt(0);
+
                 }
-
-                entries.Add(new Microcharts.Entry((float)(rating))
+                else if (date.Day == 15)
                 {
-                    Label = _game.gDate.ToShortDateString(),
-                    ValueLabel = rating.ToString(),
-                });
+                    entries.Add(new Microcharts.Entry((float)(ratingCur))
+                    {
+                        Label = date.ToString("MMMM")
+                    });
+                }
+                else
+                {
+                    entries.Add(new Microcharts.Entry((float)(ratingCur)));
+                }
             }
 
-            playerRatingChart.Chart = new LineChart() { Entries = entries };
+            playerRatingChart.Chart = new LineChart() { Entries = entries };*/
 
         }
 
@@ -80,7 +112,7 @@ namespace ChessApp.Pages
         {
             if (await DisplayAlert("WARNING", "This delete the player, continue?", "Yes, delete", "Cancel"))
             {
-                await App.Database.DeletePlayer(_player);
+                App.Database.DeletePlayer(_player);
                 await DisplayAlert("Info", "Player deleted", "OK");
                 await Navigation.PopModalAsync();
             }
@@ -103,7 +135,7 @@ namespace ChessApp.Pages
         {
             if (await DisplayAlert("WARNING", "This delete the game, continue?", "Yes, delete", "Cancel"))
             {
-                await App.Database.DeleteGame((Game)(pGamesListView.SelectedItem));
+                App.Database.DeleteGame((Game)(pGamesListView.SelectedItem));
                 await DisplayAlert("Info", "Game deleted", "OK");
                 List<Game> _gameList = await App.Database.GetGameListAsync();
                 pGamesListView.ItemsSource = _gameList.OrderByDescending(p => p.gDate);

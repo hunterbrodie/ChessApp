@@ -104,3 +104,7 @@ C:\Users\Hunter\Documents\GitHub\ChessApp\ChessApp\ChessApp.iOS\obj\iPhoneSimula
 C:\Users\Hunter\Documents\GitHub\ChessApp\ChessApp\ChessApp.iOS\obj\iPhoneSimulator\Debug\CopyFilesToMac\ChessApp.iOS.pdb.DebugSymbolsProjectOutputGroupOutput.stamp
 C:\Users\Hunter\Documents\GitHub\ChessApp\ChessApp\ChessApp.iOS\obj\iPhoneSimulator\Debug\CopyFilesToMac\Entitlements.plist.NoneOutput.stamp
 C:\Users\Hunter\Documents\GitHub\ChessApp\ChessApp\ChessApp.iOS\obj\iPhoneSimulator\Debug\CopyFilesToMac\Info.plist.NoneOutput.stamp
+C:\Users\Hunter\Documents\GitHub\ChessApp\ChessApp\ChessApp.iOS\bin\iPhoneSimulator\Debug\Microcharts.Forms.dll
+C:\Users\Hunter\Documents\GitHub\ChessApp\ChessApp\ChessApp.iOS\bin\iPhoneSimulator\Debug\SkiaSharp.Views.Forms.dll
+C:\Users\Hunter\Documents\GitHub\ChessApp\ChessApp\ChessApp.iOS\obj\iPhoneSimulator\Debug\CopyFilesToMac\Microcharts.Forms.dll.ReferenceCopyLocalPaths.stamp
+C:\Users\Hunter\Documents\GitHub\ChessApp\ChessApp\ChessApp.iOS\obj\iPhoneSimulator\Debug\CopyFilesToMac\SkiaSharp.Views.Forms.dll.ReferenceCopyLocalPaths.stamp

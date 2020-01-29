@@ -17,36 +17,34 @@ namespace ChessApp.Classes
             _database.CreateTableAsync<Game>().Wait();
         }
 
-        public Task<int> DeletePlayer(Player _player)
+        public void DeletePlayer(Player _player)
         {
             List<Game> allGames = _database.Table<Game>().ToListAsync().Result;
             for (int x = 0; x < allGames.Count; x++)
             {
                 if (allGames[x].p1ID == _player.ID || allGames[x].p2ID == _player.ID)
                 {
-                    allGames.RemoveAt(x);
-                    x--;
+                    _database.DeleteAsync<Game>(allGames[x].ID).Wait();
                 }
             }
+            _database.DeleteAsync<Player>(_player.ID).Wait();
             RecalculateRatings();
-            return _database.DeleteAsync<Player>(_player.ID);
         }
 
-        public Task<int> DeleteGame(Game _game)
+        public void DeleteGame(Game _game)
         {
-            Task<int> temp = _database.DeleteAsync<Game>(_game.ID);
+            _database.DeleteAsync<Game>(_game.ID).Wait();
             RecalculateRatings();
-            return temp;
         }
 
-        public Task<int> ResetPlayerTable()
+        public void ResetPlayerTable()
         {
-            return _database.DeleteAllAsync<Player>();
+            _database.DeleteAllAsync<Player>().Wait();
         }
 
-        public Task<int> ResetGameTable()
+        public void ResetGameTable()
         {
-            return _database.DeleteAllAsync<Game>();
+            _database.DeleteAllAsync<Game>().Wait();
         }
 
         public Task<List<Player>> GetPlayerListAsync()

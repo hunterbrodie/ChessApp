@@ -10,7 +10,7 @@
             <StackLayout>
                 <Label Text="Add Player" FontSize="Title" TextColor="Black" HorizontalOptions="Center" TextDecorations="Underline" />
                 <Entry  FontSize="Subtitle" x:Name="PlayerName" Placeholder="Player Name" Margin="4" />
-                <Button Text="Add Player" x:Name="AddPlayer" Clicked="AddPlayer_Clicked" Margin="4" />
+                <Button Text="Add Player" x:Name="AddPlayer" Clicked="AddPlayer_Clicked" Margin="4" BackgroundColor="LightGray" TextColor="Black" />
 
                 <BoxView HorizontalOptions="FillAndExpand" HeightRequest="1" Color="Gray" Margin="4" />
 
@@ -40,11 +40,11 @@
                     <DatePicker Margin="4" x:Name="GameDate" />
                     <TimePicker Margin="4" x:Name="GameTime" Grid.Column="1" />
                 </Grid>
-                <Button Text="Add Game" x:Name="AddGame" Clicked="AddGame_Clicked" Margin="4" />
+                <Button Text="Add Game" x:Name="AddGame" Clicked="AddGame_Clicked" Margin="4" BackgroundColor="LightGray" TextColor="Black" />
 
                 <BoxView HorizontalOptions="FillAndExpand" HeightRequest="1" Color="Gray" Margin="4" />
 
-                <Button Text="Erase all data" x:Name="Erase" Clicked="Erase_Clicked" Margin="4" BackgroundColor="Red"/>
+                <Button Text="Erase all data" x:Name="Erase" Clicked="Erase_Clicked" Margin="4" BackgroundColor="Red" TextColor="Black" />
 
             </StackLayout>
         </Frame>
