@@ -18,8 +18,8 @@
                     <Label x:Name="pTitle" Text="Test" />
                     <Label x:Name="pSubtitle" Text="Test" />
                 </StackLayout>
-                
-                <!--<microcharts:ChartView x:Name="playerRatingChart" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Grid.Row="1" />-->
+
+                <microcharts:ChartView x:Name="playerRatingChart" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Grid.Row="1" />
                 <StackLayout Grid.Row="2">
                     <ListView x:Name="pGamesListView" ItemSelected="pGamesListView_ItemSelected">
                         <ListView.ItemTemplate>

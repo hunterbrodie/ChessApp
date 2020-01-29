@@ -53,59 +53,39 @@ namespace ChessApp.Pages
             List<Microcharts.Entry> entries = new List<Microcharts.Entry>();
 
             allGames = oneGameDay(allGames);
-            allGames = allGames.OrderBy(g => g.gDate).ToList();
+            allGames = allGames.OrderByDescending(g => g.gDate).ToList();
 
-            //double ratingCur = 100;
+            double curRating = _player.Rating;
 
-            //if (Math.Abs(DateTime.Today.Month - allGames[0].gDate.Month) > 3)
-
-            /*for (DateTime date = allGames[0].gDate; date.Date <= DateTime.Today.Date; date = date.AddDays(7))
+            for (int x = 0; x < 8; x++)
             {
-                if (allGames.Count > 0 && date.Date == allGames[0].gDate.Date)
+                DateTime curDate = DateTime.Today.AddDays(-7 * x);
+                foreach (Game _g in allGames)
                 {
-                    ratingCur = allGames[0].p1Rating;
-
-                    if (allGames[0].p2ID == _player.ID)
+                    if (_g.gDate.Date > curDate.Date)
                     {
-                        ratingCur = allGames[0].p2Rating;
-                    }
+                        curRating = _g.p1Rating;
 
-                    if (date.Day == 15)
-                    {
-                        entries.Add(new Microcharts.Entry((float)(ratingCur))
+                        if (allGames[0].p2ID == _player.ID)
                         {
-                            ValueLabel = ratingCur.ToString(),
-                            Color = SKColor.Parse("#ff0000"),
-                            Label = date.ToString("MMMM")
-                        });
+                            curRating = _g.p2Rating;
+                        }
                     }
-                    else
-                    {
-                        entries.Add(new Microcharts.Entry((float)(ratingCur))
-                        {
-                            ValueLabel = ratingCur.ToString(),
-                            Color = SKColor.Parse("#ff0000")
-                        });
-                    }
+                }
 
-                    allGames.RemoveAt(0);
-
-                }
-                else if (date.Day == 15)
+                entries.Add(new Microcharts.Entry((float)(curRating - 100))
                 {
-                    entries.Add(new Microcharts.Entry((float)(ratingCur))
-                    {
-                        Label = date.ToString("MMMM")
-                    });
-                }
-                else
-                {
-                    entries.Add(new Microcharts.Entry((float)(ratingCur)));
-                }
+                    Label = curDate.ToString("MM/dd"),
+                    ValueLabel = curRating.ToString()
+                });
             }
+            entries.Reverse();
 
-            playerRatingChart.Chart = new LineChart() { Entries = entries };*/
+            LineChart tempChart = new LineChart() { Entries = entries };
 
+            tempChart.LabelTextSize = 36;
+
+            playerRatingChart.Chart = tempChart;
         }
 
         private async void DeletePlayer_Clicked(object sender, EventArgs e)
