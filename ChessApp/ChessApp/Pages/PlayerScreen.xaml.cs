@@ -27,6 +27,11 @@ namespace ChessApp.Pages
         {
             InitializeComponent();
             this._player = _player;
+        }
+
+        protected override async void OnAppearing()
+        {
+            base.OnAppearing();
 
             playerName.FontSize = Device.GetNamedSize(NamedSize.Title, typeof(Label));
             playerName.Text = _player.PName;
@@ -34,11 +39,6 @@ namespace ChessApp.Pages
             playerRating.FontSize = Device.GetNamedSize(NamedSize.Subtitle, typeof(Label));
             playerRating.Text = "Rating: " + _player.Rating.ToString();
             playerRating.TextColor = Color.Gray;
-        }
-
-        protected override async void OnAppearing()
-        {
-            base.OnAppearing();
 
             List<Game> allGames = await App.Database.GetGameListAsync();
             for (int x = 0; x < allGames.Count; x++)
@@ -120,6 +120,7 @@ namespace ChessApp.Pages
                 await DisplayAlert("Info", "Game deleted", "OK");
                 List<Game> _gameList = await App.Database.GetGameListAsync();
                 pGamesListView.ItemsSource = _gameList.OrderByDescending(p => p.gDate);
+                OnAppearing();
             }
         }
     }

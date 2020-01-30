@@ -15,6 +15,7 @@ namespace ChessApp.Pages
         public PlayerList()
         {
             InitializeComponent();
+            NavigationPage.SetHasNavigationBar(this, false);
         }
 
         protected override async void OnAppearing()

@@ -15,6 +15,7 @@ namespace ChessApp.Pages
         public Edit()
         {
             InitializeComponent();
+            NavigationPage.SetHasNavigationBar(this, false);
         }
         protected override async void OnAppearing()
         {
