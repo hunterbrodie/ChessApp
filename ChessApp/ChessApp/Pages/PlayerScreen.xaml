@@ -7,7 +7,7 @@
              mc:Ignorable="d"
              x:Class="ChessApp.Pages.PlayerScreen">
     <ContentPage.Content>
-        <Frame>
+        <Frame HasShadow="False">
             <Grid>
                 <Grid.RowDefinitions>
                     <RowDefinition Height="2*" />
@@ -15,8 +15,8 @@
                     <RowDefinition Height="8*" />
                 </Grid.RowDefinitions>
                 <StackLayout>
-                    <Label x:Name="pTitle" Text="Test" />
-                    <Label x:Name="pSubtitle" Text="Test" />
+                    <Label x:Name="playerName" />
+                    <Label x:Name="playerRating" />
                 </StackLayout>
 
                 <microcharts:ChartView x:Name="playerRatingChart" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Grid.Row="1" />
@@ -29,7 +29,7 @@
                             </DataTemplate>
                         </ListView.ItemTemplate>
                     </ListView>
-                    <Button x:Name="DeletePlayer" Clicked="DeletePlayer_Clicked" Text="Delete Player" VerticalOptions="EndAndExpand" BackgroundColor="Red" Margin="8" />
+                    <Button x:Name="DeletePlayer" Clicked="DeletePlayer_Clicked" Text="Delete Player" VerticalOptions="EndAndExpand" BackgroundColor="Red" Margin="8" TextColor="Black" />
                 </StackLayout>
             </Grid>
         </Frame>

@@ -19,6 +19,7 @@ namespace ChessApp.Pages
         protected override async void OnAppearing()
         {
             base.OnAppearing();
+
             Player1.ItemsSource = await App.Database.GetPlayerListAsync();
             Player2.ItemsSource = await App.Database.GetPlayerListAsync();
             GameTime.Time = DateTime.Now.TimeOfDay;

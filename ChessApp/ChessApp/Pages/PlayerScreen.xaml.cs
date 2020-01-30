@@ -20,6 +20,7 @@ namespace ChessApp.Pages
         public PlayerScreen()
         {
             InitializeComponent();
+
         }
 
         public PlayerScreen(Player _player)
@@ -27,12 +28,12 @@ namespace ChessApp.Pages
             InitializeComponent();
             this._player = _player;
 
-            pTitle.FontSize = Device.GetNamedSize(NamedSize.Title, typeof(Label));
-            pTitle.Text = "Rating";
-            pTitle.TextColor = Color.Black;
-            pSubtitle.FontSize = Device.GetNamedSize(NamedSize.Subtitle, typeof(Label));
-            pSubtitle.Text = _player.Rating.ToString();
-            pSubtitle.TextColor = Color.Gray;
+            playerName.FontSize = Device.GetNamedSize(NamedSize.Title, typeof(Label));
+            playerName.Text = _player.PName;
+            playerName.TextColor = Color.Black;
+            playerRating.FontSize = Device.GetNamedSize(NamedSize.Subtitle, typeof(Label));
+            playerRating.Text = "Rating: " + _player.Rating.ToString();
+            playerRating.TextColor = Color.Gray;
         }
 
         protected override async void OnAppearing()
@@ -94,7 +95,7 @@ namespace ChessApp.Pages
             {
                 App.Database.DeletePlayer(_player);
                 await DisplayAlert("Info", "Player deleted", "OK");
-                await Navigation.PopModalAsync();
+                await Navigation.PopAsync();
             }
         }
 

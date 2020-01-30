@@ -7,8 +7,4 @@
              mc:Ignorable="d"
              x:Class="ChessApp.Pages.Tabbed">
 
-    <local:PlayerList Title="Rankings" />
-    <local:GameList Title="Games" />
-    <local:Edit Title="Edit" />
-
 </TabbedPage>

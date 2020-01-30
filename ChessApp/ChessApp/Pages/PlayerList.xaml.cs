@@ -20,16 +20,16 @@ namespace ChessApp.Pages
         protected override async void OnAppearing()
         {
             base.OnAppearing();
-            List<Player> players = await App.Database.GetPlayerListAsync();
-            playerView.ItemsSource = players.OrderBy(p => p.Rating).Reverse();
+            List<Player> _playerList = await App.Database.GetPlayerListAsync();
+            playerView.ItemsSource = _playerList.OrderBy(p => p.Rating).Reverse();
         }
 
         private async void playerView_ItemSelected(object sender, SelectedItemChangedEventArgs e)
         {
-            PlayerScreen pScreen = new PlayerScreen((Player)(playerView.SelectedItem));
-            pScreen.Title = ((Player)(playerView.SelectedItem)).PName;
-            NavigationPage navigationPage = new NavigationPage(pScreen);
-            await Navigation.PushModalAsync(navigationPage);
+            await Navigation.PushAsync(new PlayerScreen((Player)(playerView.SelectedItem))
+            {
+                Title = "Player View"
+            });
         }
     }
 }

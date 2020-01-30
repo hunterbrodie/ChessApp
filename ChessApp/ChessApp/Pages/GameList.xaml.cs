@@ -16,12 +16,12 @@ namespace ChessApp.Pages
         {
             InitializeComponent();
         }
+
         protected override async void OnAppearing()
         {
             base.OnAppearing();
             List<Game> _gameList = await App.Database.GetGameListAsync();
             gameView.ItemsSource = _gameList.OrderByDescending(p => p.gDate);
-
         }
 
         private async void gameView_ItemSelected(object sender, SelectedItemChangedEventArgs e)
