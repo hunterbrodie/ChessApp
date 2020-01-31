@@ -16,13 +16,7 @@ namespace ChessApp.Pages
     public partial class PlayerScreen : ContentPage
     {
         private Player _player;
-        private List<Game> _gameList; 
-
-        public PlayerScreen()
-        {
-            InitializeComponent();
-
-        }
+        private List<Game> _gameList;
 
         public PlayerScreen(Player _player)
         {
@@ -60,7 +54,7 @@ namespace ChessApp.Pages
             pGamesListView.ItemsSource = allGames.OrderByDescending(g => g.gDate);
             _gameList = allGames;
 
-            GenerateGraph();
+            //GenerateGraph();
            
         }
 
@@ -97,16 +91,16 @@ namespace ChessApp.Pages
                 pGamesListView.ItemsSource = _gameList.OrderByDescending(p => p.gDate);
                 _player = await App.Database.GetPlayerAsync(_player.ID);
                 playerRating.Text = "Rating: " + _player.Rating.ToString();
-                GenerateGraph();
+                //GenerateGraph();
             }
         }
 
         private void GraphType_SelectedIndexChanged(object sender, EventArgs e)
         {
-            GenerateGraph();
+            //GenerateGraph();
         }
 
-        private void GenerateGraph()
+        /*private void GenerateGraph()
         {
 
             if (GraphType.SelectedItem.Equals("Rating"))
@@ -169,6 +163,6 @@ namespace ChessApp.Pages
 
                 playerRatingChart.Chart = new DonutChart() { Entries = entries, LabelTextSize = 36 };
             }
-        }
+        }*/
     }
 }

@@ -18,7 +18,7 @@
                                 <Label Text="{Binding gDate}" Margin="4, 0, 0, 0" FontSize="Medium" />
                             </StackLayout>
                         </ViewCell>-->
-                        <TextCell Text="{Binding disp}"
+                        <TextCell Text="{Binding Disp}"
                                   Detail="{Binding gDate}" />
                     </DataTemplate>
                 </ListView.ItemTemplate>

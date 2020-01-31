@@ -36,7 +36,7 @@ namespace ChessApp.Pages
                 {
                     HorizontalTextAlignment = TextAlignment.Center,
                     VerticalTextAlignment = TextAlignment.Center,
-                    Text = "No games are stored.\nClick the edit tab to add players and games.",
+                    Text = "No games are stored.\n\nClick the edit tab to add players and games.",
                     FontSize = Device.GetNamedSize(NamedSize.Title, typeof(Label))
                 };
             }

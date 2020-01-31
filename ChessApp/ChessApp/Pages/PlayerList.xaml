@@ -12,14 +12,19 @@
             <ListView x:Name="playerView" ItemSelected="playerView_ItemSelected">
                 <ListView.ItemTemplate>
                     <DataTemplate>
-                        <!--<ViewCell StyleId="disclosure">
-                            <StackLayout>
-                                <Label Text="{Binding PName}" FontSize="Large" Margin="4, 0, 0, 0" />
-                                <Label Text="{Binding Rating}" FontSize="Medium" Margin="4, 0, 0, 0" />
-                            </StackLayout>
-                        </ViewCell>-->
-                        <TextCell Text="{Binding PName}"
-                                  Detail="{Binding Rating}" />
+                        <ViewCell>
+                            <Grid Margin="4, 0, 4, 0">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="2*" />
+                                    <ColumnDefinition Width="*" />
+                                </Grid.ColumnDefinitions>
+                                <StackLayout Grid.Column="0">
+                                    <Label Text="{Binding PName}" FontSize="Medium" Margin="4, 0, 0, 0" TextColor="Black" />
+                                    <Label Text="{Binding Rating}" FontSize="Small" Margin="4, -8, 0, 0" />
+                                </StackLayout>
+                                <Image Source="disclosure.png" Grid.Column="1" HorizontalOptions="End" Margin="0, 12" />
+                            </Grid>
+                        </ViewCell>
                     </DataTemplate>
                 </ListView.ItemTemplate>
             </ListView>

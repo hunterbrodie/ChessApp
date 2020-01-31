@@ -26,7 +26,7 @@ namespace ChessApp.Pages
             List<Player> _playerList = await App.Database.GetPlayerListAsync();
             if (_playerList.Count > 0)
             {
-                _listView.ItemsSource = _playerList.OrderByDescending(p => p.Rating);
+                playerView.ItemsSource = _playerList.OrderByDescending(p => p.Rating);
                 listFrame.Content = _listView;
             }
             else
@@ -35,7 +35,7 @@ namespace ChessApp.Pages
                 {
                     HorizontalTextAlignment = TextAlignment.Center,
                     VerticalTextAlignment = TextAlignment.Center,
-                    Text = "No players are stored.\nClick the edit tab to add players and games.",
+                    Text = "No players are stored.\n\nClick the edit tab to add players and games.",
                     FontSize = Device.GetNamedSize(NamedSize.Title, typeof(Label))
                 };
             }
