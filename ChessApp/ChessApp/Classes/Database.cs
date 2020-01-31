@@ -28,13 +28,13 @@ namespace ChessApp.Classes
                 }
             }
             _database.DeleteAsync<Player>(_player.ID).Wait();
-            RecalculateRatings();
+            RecalculateRatings().Wait();
         }
 
         public void DeleteGame(Game _game)
         {
             _database.DeleteAsync<Game>(_game.ID).Wait();
-            RecalculateRatings();
+            RecalculateRatings().Wait();
         }
 
         public void ResetPlayerTable()
@@ -120,6 +120,48 @@ namespace ChessApp.Classes
                 }
             }
             return -1;
+        }
+
+        public int[] playerWinsLossesTies(Player _player)
+        {
+            int[] wlt = { 0, 0, 0 };
+
+            List<Game> _gameList = GetGameListAsync().Result;
+            for (int x = 0; x < _gameList.Count; x++)
+            {
+                if (_gameList[x].p1ID == _player.ID)
+                {
+                    if (_gameList[x].p1Result == 1)
+                    {
+                        wlt[0]++;
+                    }
+                    else if (_gameList[x].p1Result == 0)
+                    {
+                        wlt[1]++;
+                    }
+                    else
+                    {
+                        wlt[2]++;
+                    }
+                }
+                else if (_gameList[x].p2ID == _player.ID)
+                {
+                    if (_gameList[x].p1Result == 1)
+                    {
+                        wlt[1]++;
+                    }
+                    else if (_gameList[x].p1Result == 0)
+                    {
+                        wlt[0]++;
+                    }
+                    else
+                    {
+                        wlt[2]++;
+                    }
+                }
+            }
+
+            return wlt;
         }
 
     }

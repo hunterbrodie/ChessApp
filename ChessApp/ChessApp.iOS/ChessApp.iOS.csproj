@@ -72,16 +72,31 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ImageAsset Include="Assets.xcassets\edit_icon.png.imageset\Contents.json">
+    <ImageAsset Include="Assets.xcassets\edit_icon.imageset\Contents.json">
       <Visible>false</Visible>
     </ImageAsset>
-    <ImageAsset Include="Assets.xcassets\edit_icon.png.imageset\edit.png">
+    <ImageAsset Include="Assets.xcassets\edit_icon.imageset\edit46.png">
       <Visible>false</Visible>
     </ImageAsset>
-    <ImageAsset Include="Assets.xcassets\edit_icon.png.imageset\edit1.png">
+    <ImageAsset Include="Assets.xcassets\edit_icon.imageset\edit69.png">
       <Visible>false</Visible>
     </ImageAsset>
-    <ImageAsset Include="Assets.xcassets\edit_icon.png.imageset\edit2.png">
+    <ImageAsset Include="Assets.xcassets\games_icon.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\games_icon.imageset\games48.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\games_icon.imageset\games69.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\ranking_icon.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\ranking_icon.imageset\rankings48.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\ranking_icon.imageset\rankings69.png">
       <Visible>false</Visible>
     </ImageAsset>
     <InterfaceDefinition Include="Resources\LaunchScreen.storyboard" />

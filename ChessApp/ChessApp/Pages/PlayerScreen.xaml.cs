@@ -16,6 +16,7 @@ namespace ChessApp.Pages
     public partial class PlayerScreen : ContentPage
     {
         private Player _player;
+        private List<Game> _gameList; 
 
         public PlayerScreen()
         {
@@ -33,12 +34,19 @@ namespace ChessApp.Pages
         {
             base.OnAppearing();
 
-            playerName.FontSize = Device.GetNamedSize(NamedSize.Title, typeof(Label));
-            playerName.Text = _player.PName;
-            playerName.TextColor = Color.Black;
-            playerRating.FontSize = Device.GetNamedSize(NamedSize.Subtitle, typeof(Label));
-            playerRating.Text = "Rating: " + _player.Rating.ToString();
-            playerRating.TextColor = Color.Gray;
+            playerName = new Label()
+            {
+                FontSize = Device.GetNamedSize(NamedSize.Title, typeof(Label)),
+                Text = _player.PName,
+                TextColor = Color.Black
+            };
+
+            playerRating = new Label()
+            {
+                FontSize = Device.GetNamedSize(NamedSize.Subtitle, typeof(Label)),
+                Text = "Rating: " + _player.Rating.ToString(),
+                TextColor = Color.Gray
+            };
 
             List<Game> allGames = await App.Database.GetGameListAsync();
             for (int x = 0; x < allGames.Count; x++)
@@ -50,43 +58,10 @@ namespace ChessApp.Pages
                 }
             }
             pGamesListView.ItemsSource = allGames.OrderByDescending(g => g.gDate);
-            
-            List<Microcharts.Entry> entries = new List<Microcharts.Entry>();
+            _gameList = allGames;
 
-            allGames = oneGameDay(allGames);
-            allGames = allGames.OrderByDescending(g => g.gDate).ToList();
-
-            double curRating = _player.Rating;
-
-            for (int x = 0; x < 8; x++)
-            {
-                DateTime curDate = DateTime.Today.AddDays(-7 * x);
-                foreach (Game _g in allGames)
-                {
-                    if (_g.gDate.Date > curDate.Date)
-                    {
-                        curRating = _g.p1Rating;
-
-                        if (allGames[0].p2ID == _player.ID)
-                        {
-                            curRating = _g.p2Rating;
-                        }
-                    }
-                }
-
-                entries.Add(new Microcharts.Entry((float)(curRating - 100))
-                {
-                    Label = curDate.ToString("MM/dd"),
-                    ValueLabel = curRating.ToString()
-                });
-            }
-            entries.Reverse();
-
-            LineChart tempChart = new LineChart() { Entries = entries };
-
-            tempChart.LabelTextSize = 36;
-
-            playerRatingChart.Chart = tempChart;
+            GenerateGraph();
+           
         }
 
         private async void DeletePlayer_Clicked(object sender, EventArgs e)
@@ -120,7 +95,79 @@ namespace ChessApp.Pages
                 await DisplayAlert("Info", "Game deleted", "OK");
                 List<Game> _gameList = await App.Database.GetGameListAsync();
                 pGamesListView.ItemsSource = _gameList.OrderByDescending(p => p.gDate);
-                OnAppearing();
+                _player = await App.Database.GetPlayerAsync(_player.ID);
+                playerRating.Text = "Rating: " + _player.Rating.ToString();
+                GenerateGraph();
+            }
+        }
+
+        private void GraphType_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            GenerateGraph();
+        }
+
+        private void GenerateGraph()
+        {
+
+            if (GraphType.SelectedItem.Equals("Rating"))
+            {
+                List<Microcharts.Entry> entries = new List<Microcharts.Entry>();
+
+                _gameList = oneGameDay(_gameList);
+                _gameList = _gameList.OrderByDescending(g => g.gDate).ToList();
+
+                double curRating = _player.Rating;
+
+                for (int x = 0; x < 8; x++)
+                {
+                    DateTime curDate = DateTime.Today.AddDays(-7 * x);
+                    foreach (Game _g in _gameList)
+                    {
+                        if (_g.gDate.Date > curDate.Date)
+                        {
+                            curRating = _g.p1Rating;
+
+                            if (_gameList[0].p2ID == _player.ID)
+                            {
+                                curRating = _g.p2Rating;
+                            }
+                        }
+                    }
+
+                    entries.Add(new Microcharts.Entry((float)(curRating - 100))
+                    {
+                        Label = curDate.ToString("MM/dd"),
+                        ValueLabel = curRating.ToString()
+                    });
+                }
+                entries.Reverse();
+
+                playerRatingChart.Chart = new LineChart() { Entries = entries, LabelTextSize = 36 };
+            }
+            else
+            {
+                Microcharts.Entry[] entries = new Microcharts.Entry[3];
+                int[] wlt = App.Database.playerWinsLossesTies(_player);
+                entries[0] = new Microcharts.Entry(wlt[0])
+                {
+                    Label = "Wins",
+                    ValueLabel = wlt[0].ToString(),
+                    Color = SKColor.Parse("#b53737")
+                };
+                entries[1] = new Microcharts.Entry(wlt[1])
+                {
+                    Label = "Losses",
+                    ValueLabel = wlt[1].ToString(),
+                    Color = SKColor.Parse("#296d98")
+                };
+                entries[2] = new Microcharts.Entry(wlt[2])
+                {
+                    Label = "Ties",
+                    ValueLabel = wlt[2].ToString(),
+                    Color = SKColor.Parse("#663a82")
+                };
+
+                playerRatingChart.Chart = new DonutChart() { Entries = entries, LabelTextSize = 36 };
             }
         }
     }

@@ -21,7 +21,7 @@
                     <Picker.ItemsSource>
                     </Picker.ItemsSource>
                 </Picker>
-                <Picker FontSize="Subtitle" x:Name="Result" Title="Result" Margin="4" >
+                <Picker FontSize="Subtitle" x:Name="Result" Title="Result" Margin="4"  >
                     <Picker.ItemsSource>
                         <x:Array Type="{x:Type x:String}">
                             <x:String>Won Against</x:String>

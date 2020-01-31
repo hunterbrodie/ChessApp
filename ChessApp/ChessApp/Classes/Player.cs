@@ -21,7 +21,6 @@ namespace ChessApp.Classes
         }
         public double Rating
         {
-            //get { return getRecentRating().Result; }
             get;
             set;
         }

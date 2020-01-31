@@ -113,3 +113,9 @@ C:\Users\Hunter\Documents\GitHub\ChessApp\ChessApp\ChessApp.iOS\obj\iPhone\Debug
 C:\Users\Hunter\Documents\GitHub\ChessApp\ChessApp\ChessApp.iOS\obj\iPhone\Debug\chessicon80.png.ResolveUTIs.stamp
 C:\Users\Hunter\Documents\GitHub\ChessApp\ChessApp\ChessApp.iOS\obj\iPhone\Debug\chessicon801.png.ResolveUTIs.stamp
 C:\Users\Hunter\Documents\GitHub\ChessApp\ChessApp\ChessApp.iOS\obj\iPhone\Debug\chessicon87.png.ResolveUTIs.stamp
+C:\Users\Hunter\Documents\GitHub\ChessApp\ChessApp\ChessApp.iOS\obj\iPhone\Debug\edit46.png.ResolveUTIs.stamp
+C:\Users\Hunter\Documents\GitHub\ChessApp\ChessApp\ChessApp.iOS\obj\iPhone\Debug\edit69.png.ResolveUTIs.stamp
+C:\Users\Hunter\Documents\GitHub\ChessApp\ChessApp\ChessApp.iOS\obj\iPhone\Debug\rankings48.png.ResolveUTIs.stamp
+C:\Users\Hunter\Documents\GitHub\ChessApp\ChessApp\ChessApp.iOS\obj\iPhone\Debug\rankings69.png.ResolveUTIs.stamp
+C:\Users\Hunter\Documents\GitHub\ChessApp\ChessApp\ChessApp.iOS\obj\iPhone\Debug\games48.png.ResolveUTIs.stamp
+C:\Users\Hunter\Documents\GitHub\ChessApp\ChessApp\ChessApp.iOS\obj\iPhone\Debug\games69.png.ResolveUTIs.stamp

@@ -8,11 +8,17 @@
              mc:Ignorable="d"
              x:Class="ChessApp.Pages.GameList">
     <ContentPage.Content>
-        <Frame HasShadow="False">
+        <Frame HasShadow="False" x:Name="listFrame">
             <ListView x:Name="gameView" ItemSelected="gameView_ItemSelected">
                 <ListView.ItemTemplate>
                     <DataTemplate>
-                        <TextCell Text="{Binding Disp}"
+                        <!--<ViewCell StyleId="disclosure">
+                            <StackLayout>
+                                <Label Text="{Binding disp}" Margin="4, 0, 0, 0" FontSize="Large" />
+                                <Label Text="{Binding gDate}" Margin="4, 0, 0, 0" FontSize="Medium" />
+                            </StackLayout>
+                        </ViewCell>-->
+                        <TextCell Text="{Binding disp}"
                                   Detail="{Binding gDate}" />
                     </DataTemplate>
                 </ListView.ItemTemplate>
