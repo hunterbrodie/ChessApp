@@ -26,11 +26,6 @@ namespace ChessApp.Pages
                 Title = "Games",
                 IconImageSource = "games_icon"
             });
-            Children.Add(new NavigationPage(new Edit())
-            {
-                Title = "Edit",
-                IconImageSource = "edit_icon"
-            });
         }
 	}
 }

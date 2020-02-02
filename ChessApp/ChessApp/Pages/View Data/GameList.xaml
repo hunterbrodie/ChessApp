@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core" 
+             ios:Page.UseSafeArea="true"
+             mc:Ignorable="d"
+             x:Class="ChessApp.Pages.GameList">
+    <ContentPage.Content>
+        <Frame HasShadow="False">
+            <StackLayout>
+                <Grid Margin="4, 0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="3*" />
+                        <ColumnDefinition Width="6*" />
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="1" />
+                    </Grid.RowDefinitions>
+
+                    <BoxView Grid.Row="1" HorizontalOptions="FillAndExpand" HeightRequest="1" Color="Gray" />
+                    <BoxView Grid.Row="1" Grid.Column="1" HorizontalOptions="FillAndExpand" HeightRequest="1" Color="Gray" />
+
+                    <StackLayout>
+                        <Label Text="Date" TextColor="Black" FontSize="Medium" />
+                    </StackLayout>
+                    <StackLayout Grid.Column="1">
+                        <Label Text="Game Title" TextColor="Black" FontSize="Medium"/>
+                    </StackLayout>
+                </Grid>
+
+                <ListView x:Name="gameView" ItemSelected="gameView_ItemSelected" Footer="" SeparatorVisibility="None" >
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <Grid Margin="4, 0">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="3*" />
+                                        <ColumnDefinition Width="6*" />
+                                    </Grid.ColumnDefinitions>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="*" />
+                                        <RowDefinition Height="1" />
+                                    </Grid.RowDefinitions>
+                                    
+                                    <BoxView Grid.Row="1" HorizontalOptions="FillAndExpand" HeightRequest="1" Color="Gray" />
+                                    <BoxView Grid.Row="1" Grid.Column="1" HorizontalOptions="FillAndExpand" HeightRequest="1" Color="Gray" />
+
+                                    <StackLayout>
+                                        <Label Text="{Binding gDate}" TextColor="Black" FontSize="Medium" VerticalOptions="EndAndExpand"/>
+                                    </StackLayout>
+
+                                    <StackLayout Orientation="Horizontal" Grid.Column="1">
+                                        <StackLayout>
+                                            <Label Text="{Binding Disp}" TextColor="Black" FontSize="Medium" VerticalOptions="EndAndExpand"/>
+                                        </StackLayout>
+                                        <Image Source="trash.png" HorizontalOptions="EndAndExpand" VerticalOptions="Center" />
+                                    </StackLayout>
+                                </Grid>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </StackLayout>
+        </Frame>
+    </ContentPage.Content>
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Add Game" x:Name="AddGameToolBarText" Clicked="AddGameToolBar_Clicked" />
+        <ToolbarItem Icon="add.png" x:Name="AddGameToolBarIcon" Clicked="AddGameToolBar_Clicked" />
+    </ContentPage.ToolbarItems>
+</ContentPage>

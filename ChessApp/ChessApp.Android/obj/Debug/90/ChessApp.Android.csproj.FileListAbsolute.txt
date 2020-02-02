@@ -505,8 +505,10 @@ C:\Users\Hunter\Documents\GitHub\ChessApp\ChessApp\ChessApp.Android\obj\Debug\90
 C:\Users\Hunter\Documents\GitHub\ChessApp\ChessApp\ChessApp.Android\obj\Debug\90\android\src\crc64bb223c2be3a01e03\SKCanvasViewRendererBase_2.java
 C:\Users\Hunter\Documents\GitHub\ChessApp\ChessApp\ChessApp.Android\obj\Debug\90\android\src\crc64bb223c2be3a01e03\SKGLViewRenderer.java
 C:\Users\Hunter\Documents\GitHub\ChessApp\ChessApp\ChessApp.Android\obj\Debug\90\android\src\crc64bb223c2be3a01e03\SKGLViewRendererBase_2.java
-C:\Users\Hunter\Documents\GitHub\ChessApp\ChessApp\ChessApp.Android\obj\Debug\90\stamp\SetupDependenciesForDesigner.stamp
 C:\Users\Hunter\Documents\GitHub\ChessApp\ChessApp\ChessApp.Android\obj\Debug\90\res\drawable\disclosure.png
-C:\Users\Hunter\Documents\GitHub\ChessApp\ChessApp\ChessApp.Android\obj\Debug\90\android\assets\Xamarin.Forms.Platform.iOS.dll
-C:\Users\Hunter\Documents\GitHub\ChessApp\ChessApp\ChessApp.Android\obj\Debug\90\android\assets\Xamarin.Forms.Platform.iOS.pdb
-C:\Users\Hunter\Documents\GitHub\ChessApp\ChessApp\ChessApp.Android\obj\Debug\90\android\assets\Xamarin.iOS.dll
+C:\Users\Hunter\Documents\GitHub\ChessApp\ChessApp\ChessApp.Android\obj\Debug\90\res\drawable\add.png
+C:\Users\Hunter\Documents\GitHub\ChessApp\ChessApp\ChessApp.Android\obj\Debug\90\res\drawable\win.png
+C:\Users\Hunter\Documents\GitHub\ChessApp\ChessApp\ChessApp.Android\obj\Debug\90\res\drawable\loss.png
+C:\Users\Hunter\Documents\GitHub\ChessApp\ChessApp\ChessApp.Android\obj\Debug\90\res\drawable\tie.png
+C:\Users\Hunter\Documents\GitHub\ChessApp\ChessApp\ChessApp.Android\obj\Debug\90\res\drawable\trash.png
+C:\Users\Hunter\Documents\GitHub\ChessApp\ChessApp\ChessApp.Android\obj\Debug\90\res\drawable\disclosurebad.png

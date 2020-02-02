@@ -37,6 +37,12 @@ namespace ChessApp.Classes
             RecalculateRatings().Wait();
         }
 
+        public void DeleteGameFromID(int ID)
+        {
+            _database.DeleteAsync<Game>(ID).Wait();
+            RecalculateRatings().Wait();
+        }
+
         public void ResetPlayerTable()
         {
             _database.DeleteAllAsync<Player>().Wait();
@@ -45,6 +51,7 @@ namespace ChessApp.Classes
         public void ResetGameTable()
         {
             _database.DeleteAllAsync<Game>().Wait();
+            RecalculateRatings().Wait();
         }
 
         public Task<List<Player>> GetPlayerListAsync()
@@ -84,7 +91,7 @@ namespace ChessApp.Classes
 
             for (int x  = 0; x < playerList.Count; x++)
             {
-                playerList[x].Rating = 100;
+                playerList[x].Rating = 1000;
             }
 
             for (int x = 0; x < gameList.Count; x++)
@@ -95,11 +102,11 @@ namespace ChessApp.Classes
                 gameList[x].p1Rating = playerList[p1Pos].Rating;
                 gameList[x].p2Rating = playerList[p2Pos].Rating;
 
-                double eA = 1 / (1 + Math.Pow(10, (playerList[p2Pos].Rating - playerList[p1Pos].Rating) / 40));
+                double eA = 1 / (1 + Math.Pow(10, (playerList[p2Pos].Rating - playerList[p1Pos].Rating) / 400));
                 double eB = 1 - eA;
 
-                eA = Math.Round(8 * (gameList[x].p1Result - eA), 2);
-                eB = Math.Round(8 * ((1 - gameList[x].p1Result) - eB), 2);
+                eA = Math.Round(32 * (gameList[x].p1Result - eA), 2);
+                eB = Math.Round(32 * ((1 - gameList[x].p1Result) - eB), 2);
 
                 playerList[p1Pos].Rating += eA;
                 playerList[p2Pos].Rating += eB;
@@ -120,48 +127,6 @@ namespace ChessApp.Classes
                 }
             }
             return -1;
-        }
-
-        public int[] playerWinsLossesTies(Player _player)
-        {
-            int[] wlt = { 0, 0, 0 };
-
-            List<Game> _gameList = GetGameListAsync().Result;
-            for (int x = 0; x < _gameList.Count; x++)
-            {
-                if (_gameList[x].p1ID == _player.ID)
-                {
-                    if (_gameList[x].p1Result == 1)
-                    {
-                        wlt[0]++;
-                    }
-                    else if (_gameList[x].p1Result == 0)
-                    {
-                        wlt[1]++;
-                    }
-                    else
-                    {
-                        wlt[2]++;
-                    }
-                }
-                else if (_gameList[x].p2ID == _player.ID)
-                {
-                    if (_gameList[x].p1Result == 1)
-                    {
-                        wlt[1]++;
-                    }
-                    else if (_gameList[x].p1Result == 0)
-                    {
-                        wlt[0]++;
-                    }
-                    else
-                    {
-                        wlt[2]++;
-                    }
-                }
-            }
-
-            return wlt;
         }
 
     }

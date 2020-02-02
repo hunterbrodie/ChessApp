@@ -28,16 +28,34 @@
   </ItemGroup>
 
   <ItemGroup>
-    <EmbeddedResource Update="Pages\Edit.xaml">
+    <Compile Update="Obsolete\GameListOLD.xaml.cs">
+      <DependentUpon>GameListOLD.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Obsolete\PlayerListOLD.xaml.cs">
+      <DependentUpon>PlayerListOLD.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="Pages\Edit Data\AddGame.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="Pages\GameList.xaml">
+    <EmbeddedResource Update="Pages\Edit Data\AddPlayer.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="Pages\PlayerList.xaml">
+    <EmbeddedResource Update="Obsolete\Edit.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="Pages\PlayerScreen.xaml">
+    <EmbeddedResource Update="Pages\View Data\GameList.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Pages\View Data\PlayerDetail.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Pages\View Data\PlayerList.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Obsolete\PlayerScreen.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="Pages\Tabbed.xaml">

@@ -1,0 +1,77 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core" 
+             ios:Page.UseSafeArea="true"
+             mc:Ignorable="d"
+             x:Class="ChessApp.Pages.PlayerList">
+    <ContentPage.Content>
+        <Frame HasShadow="False">
+            <StackLayout>
+                <Grid Margin="4, 0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="1" />
+                    </Grid.RowDefinitions>
+
+                    <BoxView Grid.Row="1" HorizontalOptions="FillAndExpand" HeightRequest="1" Color="Gray" />
+                    <BoxView Grid.Row="1" Grid.Column="1" HorizontalOptions="FillAndExpand" HeightRequest="1" Color="Gray" />
+                    <BoxView Grid.Row="1" Grid.Column="2" HorizontalOptions="FillAndExpand" HeightRequest="1" Color="Gray" />
+
+                    <StackLayout>
+                        <Label Text="Name" TextColor="Black" FontSize="Medium" />
+                    </StackLayout>
+                    <StackLayout Grid.Column="1">
+                        <Label Text="W/L/T" TextColor="Black" FontSize="Medium" />
+                    </StackLayout>
+                    <StackLayout Grid.Column="2">
+                        <Label Text="Rating" TextColor="Black" FontSize="Medium" />
+                    </StackLayout>
+                </Grid>
+                
+                <ListView x:Name="playerView" ItemSelected="playerView_ItemSelected" Footer="" SeparatorVisibility="None">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <Grid Margin="4, 0">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="*" />
+                                        <ColumnDefinition Width="*" />
+                                        <ColumnDefinition Width="*" />
+                                    </Grid.ColumnDefinitions>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="*" />
+                                        <RowDefinition Height="1" />
+                                    </Grid.RowDefinitions>
+                                    
+                                    <BoxView Grid.Row="1" HorizontalOptions="FillAndExpand" HeightRequest="1" Color="Gray" />
+                                    <BoxView Grid.Row="1" Grid.Column="1" HorizontalOptions="FillAndExpand" HeightRequest="1" Color="Gray" />
+                                    <BoxView Grid.Row="1" Grid.Column="2" HorizontalOptions="FillAndExpand" HeightRequest="1" Color="Gray" />
+
+                                    <Label Text="{Binding PName}" FontSize="Medium" TextColor="Black" VerticalOptions="EndAndExpand" />
+                                    <Label Text="{Binding Wlt}" Grid.Column="1" FontSize="Medium" TextColor="Black" VerticalOptions="EndAndExpand" />
+
+                                    <StackLayout Orientation="Horizontal" Grid.Column="2" >
+                                        <Label Text="{Binding Rating}" FontSize="Medium" TextColor="Black" VerticalOptions="EndAndExpand"/>
+                                        <Image Source="disclosure.png" HorizontalOptions="EndAndExpand" VerticalOptions="EndAndExpand" />
+                                    </StackLayout>
+                                </Grid>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </StackLayout>
+        </Frame>
+    </ContentPage.Content>
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Add Player" x:Name="AddPlayerToolBarText" Clicked="AddPlayerToolBar_Clicked" />
+        <ToolbarItem Icon="add.png" Text="Add" x:Name="AddPlayerToolBarIcon" Clicked="AddPlayerToolBar_Clicked" />
+    </ContentPage.ToolbarItems>
+</ContentPage>

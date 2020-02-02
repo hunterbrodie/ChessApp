@@ -1,0 +1,107 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:microcharts="clr-namespace:Microcharts.Forms;assembly=Microcharts.Forms"
+             mc:Ignorable="d"
+             x:Class="ChessApp.Pages.View_Data.PlayerDetail">
+    <ContentPage.Content>
+        <Frame HasShadow="False">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="3*" />
+                    <RowDefinition Height="4*" />
+                    <RowDefinition Height="8*" />
+                </Grid.RowDefinitions>
+                
+                <StackLayout>
+                    <Label x:Name="playerNameLabel" />
+                    <Label x:Name="playerRatingLabel" />
+
+                    <Picker x:Name="GraphType" Margin="4" FontSize="Subtitle" SelectedIndexChanged="GraphType_SelectedIndexChanged">
+                        <Picker.ItemsSource>
+                            <x:Array Type="{x:Type x:String}">
+                                <x:String>Rating</x:String>
+                                <x:String>Win/Loss/Tie</x:String>
+                            </x:Array>
+                        </Picker.ItemsSource>
+                        <Picker.SelectedIndex>0</Picker.SelectedIndex>
+                    </Picker>
+                </StackLayout>
+
+                <microcharts:ChartView x:Name="playerChartView" Grid.Row="1" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" />
+
+                <StackLayout Grid.Row="2">
+                    <Grid Margin="4, 0">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="4*" />
+                            <ColumnDefinition Width="4*" />
+                            <ColumnDefinition Width="2*" />
+                            <ColumnDefinition Width="2*" />
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="*" />
+                            <RowDefinition Height="1" />
+                        </Grid.RowDefinitions>
+
+                        <BoxView Grid.Row="1" Grid.Column="0" HeightRequest="1" Color="Gray" HorizontalOptions="FillAndExpand" />
+                        <BoxView Grid.Row="1" Grid.Column="1" HeightRequest="1" Color="Gray" HorizontalOptions="FillAndExpand" />
+                        <BoxView Grid.Row="1" Grid.Column="2" HeightRequest="1" Color="Gray" HorizontalOptions="FillAndExpand" />
+                        <BoxView Grid.Row="1" Grid.Column="3" HeightRequest="1" Color="Gray" HorizontalOptions="FillAndExpand" />
+
+                        <StackLayout>
+                            <Label Text="Date" TextColor="Black" FontSize="Medium" />
+                        </StackLayout>
+                        <StackLayout Grid.Column="1">
+                            <Label Text="Opponent" TextColor="Black" FontSize="Medium"/>
+                        </StackLayout>
+                        <StackLayout Grid.Column="2">
+                            <Label Text="Result" TextColor="Black" FontSize="Medium" />
+                        </StackLayout>
+                        <StackLayout Grid.Column="3">
+                            <Label Text="+/-" TextColor="Black" FontSize="Medium" />
+                        </StackLayout>
+                    </Grid>
+
+                    <ListView x:Name="playerGamesView" ItemSelected="playerGamesView_ItemSelected" Footer="" SeparatorVisibility="None" >
+                        <ListView.ItemTemplate>
+                            <DataTemplate>
+                                <ViewCell>
+                                    <Grid Margin="4, 0">
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="4*" />
+                                            <ColumnDefinition Width="4*" />
+                                            <ColumnDefinition Width="2*" />
+                                            <ColumnDefinition Width="2*" />
+                                        </Grid.ColumnDefinitions>
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="*" />
+                                            <RowDefinition Height="1" />
+                                        </Grid.RowDefinitions>
+
+                                        <BoxView Grid.Row="1" HeightRequest="1" HorizontalOptions="FillAndExpand" Color="Gray" />
+                                        <BoxView Grid.Row="1" Grid.Column="1" HeightRequest="1" HorizontalOptions="FillAndExpand" Color="Gray" />
+                                        <BoxView Grid.Row="1" Grid.Column="2" HeightRequest="1" HorizontalOptions="FillAndExpand" Color="Gray" />
+                                        <BoxView Grid.Row="1" Grid.Column="3" HeightRequest="1" HorizontalOptions="FillAndExpand" Color="Gray" />
+
+                                        <StackLayout>
+                                            <Label Text="{Binding gDate}" TextColor="Black" FontSize="Medium" VerticalOptions="EndAndExpand"/>
+                                        </StackLayout>
+                                        <StackLayout Grid.Column="1">
+                                            <Label Text="{Binding Opponent}" TextColor="Black" FontSize="Medium" VerticalOptions="EndAndExpand" />
+                                        </StackLayout>
+                                        <StackLayout Grid.Column="2">
+                                            <Image Source="{Binding wlt}" VerticalOptions="EndAndExpand" HorizontalOptions="StartAndExpand" />
+                                        </StackLayout>
+                                    </Grid>
+                                </ViewCell>
+                            </DataTemplate>
+                        </ListView.ItemTemplate>
+                    </ListView>
+                    <Button Text="Delete Player" TextColor="Black" BackgroundColor="Red" x:Name="DeletePlayerButton" Clicked="DeletePlayerButton_Clicked" VerticalOptions="EndAndExpand" Margin="8"/>
+                </StackLayout>
+            </Grid>
+        </Frame>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="ChessApp.Pages.AddGame">
+    <ContentPage.Content>
+        <Frame HasShadow="False">
+            <StackLayout>
+                <Label Text="Add Game" FontSize="Title" TextColor="Black" HorizontalOptions="Center" TextDecorations="Underline" />
+                <Picker FontSize="Subtitle" x:Name="Player1" Title="Player 1" Margin="8" >
+                    <Picker.ItemsSource>
+                    </Picker.ItemsSource>
+                </Picker>
+                <Picker FontSize="Subtitle" x:Name="Result" Title="Result" Margin="8"  >
+                    <Picker.ItemsSource>
+                        <x:Array Type="{x:Type x:String}">
+                            <x:String>Won Against</x:String>
+                            <x:String>Tied With</x:String>
+                            <x:String>Lost To</x:String>
+                        </x:Array>
+                    </Picker.ItemsSource>
+                </Picker>
+                <Picker FontSize="Subtitle" x:Name="Player2" Title="Player 2" Margin="8" >
+                    <Picker.ItemsSource>
+                    </Picker.ItemsSource>
+                </Picker>
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition />
+                        <ColumnDefinition />
+                    </Grid.ColumnDefinitions>
+                    <DatePicker Margin="8" x:Name="GameDate" />
+                    <TimePicker Margin="8" x:Name="GameTime" Grid.Column="1" />
+                </Grid>
+                <Button Text="Add Game" x:Name="AddGameButton" Clicked="AddGameButton_Clicked" Margin="8" BackgroundColor="LightGray" TextColor="Black" />
+
+                <Button Text="Erase all games" x:Name="EraseGames" Clicked="EraseGames_Clicked" Margin="8" BackgroundColor="Red" TextColor="Black" VerticalOptions="EndAndExpand"/>
+            </StackLayout>
+        </Frame>
+    </ContentPage.Content>
+</ContentPage>

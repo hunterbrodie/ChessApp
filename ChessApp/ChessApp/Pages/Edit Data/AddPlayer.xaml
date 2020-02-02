@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="ChessApp.Pages.AddPlayer">
+    <ContentPage.Content>
+        <Frame HasShadow="False">
+            <StackLayout>
+                <Label Text="Add Player" FontSize="Title" TextColor="Black" HorizontalOptions="Center" TextDecorations="Underline" />
+                <Entry  FontSize="Subtitle" x:Name="PlayerName" Placeholder="Player Name" Margin="4" />
+                <Button Text="Add Player" x:Name="AddPlayerButton" Clicked="AddPlayerButton_Clicked" Margin="4" BackgroundColor="LightGray" TextColor="Black" />
+                <Button Text="Erase all data" x:Name="EraseAllData" Clicked="EraseAllData_Clicked" Margin="8" BackgroundColor="Red" TextColor="Black" VerticalOptions="EndAndExpand"/>
+            </StackLayout>
+        </Frame>
+    </ContentPage.Content>
+</ContentPage>
