@@ -7,15 +7,17 @@ using UIKit;
 using Xamarin.Forms;
 using Xamarin.Forms.Platform.iOS;
 using Xamarin.Forms.Xaml;
+using Xamarin.Forms.PlatformConfiguration.AndroidSpecific;
 
 namespace ChessApp.Pages
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class Tabbed : TabbedPage
+    public partial class Tabbed : Xamarin.Forms.TabbedPage
     {
         public Tabbed()
         {
             InitializeComponent();
+            On<Xamarin.Forms.PlatformConfiguration.Android>().SetToolbarPlacement(ToolbarPlacement.Bottom);
             Children.Add(new NavigationPage(new PlayerList())
             {
                 Title = "Rankings",

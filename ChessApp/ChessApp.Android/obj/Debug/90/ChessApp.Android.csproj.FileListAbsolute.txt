@@ -507,8 +507,6 @@ C:\Users\Hunter\Documents\GitHub\ChessApp\ChessApp\ChessApp.Android\obj\Debug\90
 C:\Users\Hunter\Documents\GitHub\ChessApp\ChessApp\ChessApp.Android\obj\Debug\90\android\src\crc64bb223c2be3a01e03\SKGLViewRendererBase_2.java
 C:\Users\Hunter\Documents\GitHub\ChessApp\ChessApp\ChessApp.Android\obj\Debug\90\res\drawable\disclosure.png
 C:\Users\Hunter\Documents\GitHub\ChessApp\ChessApp\ChessApp.Android\obj\Debug\90\res\drawable\add.png
-C:\Users\Hunter\Documents\GitHub\ChessApp\ChessApp\ChessApp.Android\obj\Debug\90\res\drawable\win.png
-C:\Users\Hunter\Documents\GitHub\ChessApp\ChessApp\ChessApp.Android\obj\Debug\90\res\drawable\loss.png
-C:\Users\Hunter\Documents\GitHub\ChessApp\ChessApp\ChessApp.Android\obj\Debug\90\res\drawable\tie.png
 C:\Users\Hunter\Documents\GitHub\ChessApp\ChessApp\ChessApp.Android\obj\Debug\90\res\drawable\trash.png
-C:\Users\Hunter\Documents\GitHub\ChessApp\ChessApp\ChessApp.Android\obj\Debug\90\res\drawable\disclosurebad.png
+C:\Users\Hunter\Documents\GitHub\ChessApp\ChessApp\ChessApp.Android\obj\Debug\90\res\drawable\games_icon.png
+C:\Users\Hunter\Documents\GitHub\ChessApp\ChessApp\ChessApp.Android\obj\Debug\90\res\drawable\ranking_icon.png

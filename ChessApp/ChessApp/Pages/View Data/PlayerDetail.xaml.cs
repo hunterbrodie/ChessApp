@@ -80,39 +80,107 @@ namespace ChessApp.Pages.View_Data
             _gameList = App.Database.GetGameListAsync().Result;
             for (int x = 0; x < _gameList.Count; x++)
             {
+                if (_gameList[x].p1ID != _player.ID && _gameList[x].p2ID != _player.ID)
+                {
+                    _gameList.RemoveAt(x);
+                    x--;
+                }
+            }
+            _gameList = _gameList.OrderBy(g => g.gDate).ToList();
+
+            for (int x = 0; x < _gameList.Count; x++)
+            {
                 if (_gameList[x].p1ID == _player.ID)
                 {
                     if (_gameList[x].p1Result == 1)
                     {
                         wlt[0]++;
+
+                        double change;
+
+                        if (x < _gameList.Count - 1)
+                        {
+                            if (_gameList[x + 1].p1ID == _player.ID)
+                            {
+                                change = _gameList[x + 1].p1Rating - _gameList[x].p1Rating;
+                            }
+                            else
+                            {
+                                change = _gameList[x + 1].p2Rating - _gameList[x].p1Rating;
+                            }
+                        }
+                        else
+                        {
+                            change = _player.Rating - _gameList[x].p1Rating;
+                        }
+
                         gameViewSrc.Add(new PlayerGameDisplay()
                         {
                             gID = _gameList[x].ID,
                             Opponent = App.Database.GetPlayerAsync(_gameList[x].p2ID).Result.PName,
                             gDate = _gameList[x].gDate,
-                            wlt = "win.png"
+                            wlt = "Win",
+                            change = Math.Round(change, 2)
                         });
                     }
                     else if (_gameList[x].p1Result == 0)
                     {
                         wlt[1]++;
+
+                        double change;
+
+                        if (x < _gameList.Count - 1)
+                        {
+                            if (_gameList[x + 1].p1ID == _player.ID)
+                            {
+                                change = _gameList[x + 1].p1Rating - _gameList[x].p1Rating;
+                            }
+                            else
+                            {
+                                change = _gameList[x + 1].p2Rating - _gameList[x].p1Rating;
+                            }
+                        }
+                        else
+                        {
+                            change = _player.Rating - _gameList[x].p1Rating;
+                        }
                         gameViewSrc.Add(new PlayerGameDisplay()
                         {
                             gID = _gameList[x].ID,
                             Opponent = App.Database.GetPlayerAsync(_gameList[x].p2ID).Result.PName,
                             gDate = _gameList[x].gDate,
-                            wlt = "loss.png"
+                            wlt = "Loss",
+                            change = Math.Round(change, 2)
                         });
                     }
                     else
                     {
                         wlt[2]++;
+
+                        double change;
+
+                        if (x < _gameList.Count - 1)
+                        {
+                            if (_gameList[x + 1].p1ID == _player.ID)
+                            {
+                                change = _gameList[x + 1].p1Rating - _gameList[x].p1Rating;
+                            }
+                            else
+                            {
+                                change = _gameList[x + 1].p2Rating - _gameList[x].p1Rating;
+                            }
+                        }
+                        else
+                        {
+                            change = _player.Rating - _gameList[x].p1Rating;
+                        }
                         gameViewSrc.Add(new PlayerGameDisplay()
                         {
                             gID = _gameList[x].ID,
                             Opponent = App.Database.GetPlayerAsync(_gameList[x].p2ID).Result.PName,
                             gDate = _gameList[x].gDate,
-                            wlt = "tie.png"
+                            wlt = "Tie",
+                            change = Math.Round(change, 2)
                         });
                     }
 
@@ -122,43 +190,98 @@ namespace ChessApp.Pages.View_Data
                     if (_gameList[x].p1Result == 1)
                     {
                         wlt[1]++;
+
+                        double change;
+
+                        if (x < _gameList.Count - 1)
+                        {
+                            if (_gameList[x + 1].p1ID == _player.ID)
+                            {
+                                change = _gameList[x + 1].p1Rating - _gameList[x].p2Rating;
+                            }
+                            else
+                            {
+                                change = _gameList[x + 1].p2Rating - _gameList[x].p2Rating;
+                            }
+                        }
+                        else
+                        {
+                            change = _player.Rating - _gameList[x].p2Rating;
+                        }
                         gameViewSrc.Add(new PlayerGameDisplay()
                         {
                             gID = _gameList[x].ID,
                             Opponent = App.Database.GetPlayerAsync(_gameList[x].p1ID).Result.PName,
                             gDate = _gameList[x].gDate,
-                            wlt = "loss.png"
+                            wlt = "Loss",
+                            change = Math.Round(change, 2)
                         });
                     }
                     else if (_gameList[x].p1Result == 0)
                     {
                         wlt[0]++;
+
+                        double change;
+
+                        if (x < _gameList.Count - 1)
+                        {
+                            if (_gameList[x + 1].p1ID == _player.ID)
+                            {
+                                change = _gameList[x + 1].p1Rating - _gameList[x].p2Rating;
+                            }
+                            else
+                            {
+                                change = _gameList[x + 1].p2Rating - _gameList[x].p2Rating;
+                            }
+                        }
+                        else
+                        {
+                            change = _player.Rating - _gameList[x].p2Rating;
+                        }
                         gameViewSrc.Add(new PlayerGameDisplay()
                         {
                             gID = _gameList[x].ID,
                             Opponent = App.Database.GetPlayerAsync(_gameList[x].p1ID).Result.PName,
                             gDate = _gameList[x].gDate,
-                            wlt = "win.png"
+                            wlt = "Win",
+                            change = Math.Round(change, 2)
                         });
                     }
                     else
                     {
                         wlt[2]++;
+
+                        double change;
+
+                        if (x < _gameList.Count - 1)
+                        {
+                            if (_gameList[x + 1].p1ID == _player.ID)
+                            {
+                                change = _gameList[x + 1].p1Rating - _gameList[x].p2Rating;
+                            }
+                            else
+                            {
+                                change = _gameList[x + 1].p2Rating - _gameList[x].p2Rating;
+                            }
+                        }
+                        else
+                        {
+                            change = _player.Rating - _gameList[x].p2Rating;
+                        }
                         gameViewSrc.Add(new PlayerGameDisplay()
                         {
                             gID = _gameList[x].ID,
                             Opponent = App.Database.GetPlayerAsync(_gameList[x].p1ID).Result.PName,
                             gDate = _gameList[x].gDate,
-                            wlt = "tie.png"
+                            wlt = "Tie",
+                            change = Math.Round(change, 2)
                         });
                     }
                 }
-                else
-                {
-                    _gameList.RemoveAt(x);
-                    x--;
-                }
             }
+
+
+
             playerGamesView.ItemsSource = gameViewSrc.OrderByDescending(g => g.gDate);
         }
 
@@ -193,7 +316,7 @@ namespace ChessApp.Pages.View_Data
                             }
                         }
 
-                        entries.Add(new Microcharts.Entry((float)(curRating - 100))
+                        entries.Add(new Microcharts.Entry((float)(curRating - 1000))
                         {
                             Label = _date.ToString("MM/dd"),
                             ValueLabel = curRating.ToString()
@@ -251,6 +374,58 @@ namespace ChessApp.Pages.View_Data
         public string Opponent { get; set; }
         public DateTime gDate { get; set; }
         public string wlt { get; set; }
+        public Color wltColor
+        {
+            get
+            {
+                if (wlt.Equals("Win"))
+                {
+                    return Color.FromHex("#77dd77");
+                }
+                else if (wlt.Equals("Loss"))
+                {
+                    return Color.FromHex("#ff6961");
+                }
+                else
+                {
+                    return Color.FromHex("#AEC6CF");
+                }
+            }
+        }
         public int gID { get; set; }
+        public double change { get; set; }
+        public string changeStr
+        {
+            get
+            {
+                if (change >= 0)
+                {
+                    return "+" + change;
+                }
+                else
+                {
+                    return change.ToString();
+                }
+            }
+        }
+        public Color changeColor
+        {
+            get
+            {
+                if (change > 0)
+                {
+                    return Color.FromHex("#77dd77");
+                }
+                else if (change < 0)
+                {
+                    return Color.FromHex("#ff6961");
+                }
+                else
+                {
+                    return Color.FromHex("#AEC6CF");
+                }
+            }
+        }
+        public string gDateStr { get { return gDate.ToShortDateString(); } }
     }
 }

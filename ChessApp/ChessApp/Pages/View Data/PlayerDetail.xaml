@@ -10,8 +10,8 @@
         <Frame HasShadow="False">
             <Grid>
                 <Grid.RowDefinitions>
-                    <RowDefinition Height="3*" />
                     <RowDefinition Height="4*" />
+                    <RowDefinition Height="5*" />
                     <RowDefinition Height="8*" />
                 </Grid.RowDefinitions>
                 
@@ -33,38 +33,39 @@
                 <microcharts:ChartView x:Name="playerChartView" Grid.Row="1" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" />
 
                 <StackLayout Grid.Row="2">
-                    <Grid Margin="4, 0">
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="4*" />
-                            <ColumnDefinition Width="4*" />
-                            <ColumnDefinition Width="2*" />
-                            <ColumnDefinition Width="2*" />
-                        </Grid.ColumnDefinitions>
-                        <Grid.RowDefinitions>
-                            <RowDefinition Height="*" />
-                            <RowDefinition Height="1" />
-                        </Grid.RowDefinitions>
-
-                        <BoxView Grid.Row="1" Grid.Column="0" HeightRequest="1" Color="Gray" HorizontalOptions="FillAndExpand" />
-                        <BoxView Grid.Row="1" Grid.Column="1" HeightRequest="1" Color="Gray" HorizontalOptions="FillAndExpand" />
-                        <BoxView Grid.Row="1" Grid.Column="2" HeightRequest="1" Color="Gray" HorizontalOptions="FillAndExpand" />
-                        <BoxView Grid.Row="1" Grid.Column="3" HeightRequest="1" Color="Gray" HorizontalOptions="FillAndExpand" />
-
-                        <StackLayout>
-                            <Label Text="Date" TextColor="Black" FontSize="Medium" />
-                        </StackLayout>
-                        <StackLayout Grid.Column="1">
-                            <Label Text="Opponent" TextColor="Black" FontSize="Medium"/>
-                        </StackLayout>
-                        <StackLayout Grid.Column="2">
-                            <Label Text="Result" TextColor="Black" FontSize="Medium" />
-                        </StackLayout>
-                        <StackLayout Grid.Column="3">
-                            <Label Text="+/-" TextColor="Black" FontSize="Medium" />
-                        </StackLayout>
-                    </Grid>
-
                     <ListView x:Name="playerGamesView" ItemSelected="playerGamesView_ItemSelected" Footer="" SeparatorVisibility="None" >
+                        <ListView.Header>
+                            <Grid Margin="4, 0">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="4*" />
+                                    <ColumnDefinition Width="4*" />
+                                    <ColumnDefinition Width="2*" />
+                                    <ColumnDefinition Width="2*" />
+                                </Grid.ColumnDefinitions>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="*" />
+                                    <RowDefinition Height="1" />
+                                </Grid.RowDefinitions>
+
+                                <BoxView Grid.Row="1" Grid.Column="0" HeightRequest="1" Color="Gray" HorizontalOptions="FillAndExpand" />
+                                <BoxView Grid.Row="1" Grid.Column="1" HeightRequest="1" Color="Gray" HorizontalOptions="FillAndExpand" />
+                                <BoxView Grid.Row="1" Grid.Column="2" HeightRequest="1" Color="Gray" HorizontalOptions="FillAndExpand" />
+                                <BoxView Grid.Row="1" Grid.Column="3" HeightRequest="1" Color="Gray" HorizontalOptions="FillAndExpand" />
+
+                                <StackLayout>
+                                    <Label Text="Date" TextColor="Black" FontSize="Medium" />
+                                </StackLayout>
+                                <StackLayout Grid.Column="1">
+                                    <Label Text="Opponent" TextColor="Black" FontSize="Medium"/>
+                                </StackLayout>
+                                <StackLayout Grid.Column="2">
+                                    <Label Text="Result" TextColor="Black" FontSize="Medium" />
+                                </StackLayout>
+                                <StackLayout Grid.Column="3">
+                                    <Label Text="+/-" TextColor="Black" FontSize="Medium" />
+                                </StackLayout>
+                            </Grid>
+                        </ListView.Header>
                         <ListView.ItemTemplate>
                             <DataTemplate>
                                 <ViewCell>
@@ -86,15 +87,20 @@
                                         <BoxView Grid.Row="1" Grid.Column="3" HeightRequest="1" HorizontalOptions="FillAndExpand" Color="Gray" />
 
                                         <StackLayout>
-                                            <Label Text="{Binding gDate}" TextColor="Black" FontSize="Medium" VerticalOptions="EndAndExpand"/>
+                                            <Label Text="{Binding gDateStr}" TextColor="Black" FontSize="Medium" VerticalOptions="EndAndExpand"/>
                                         </StackLayout>
                                         <StackLayout Grid.Column="1">
                                             <Label Text="{Binding Opponent}" TextColor="Black" FontSize="Medium" VerticalOptions="EndAndExpand" />
                                         </StackLayout>
                                         <StackLayout Grid.Column="2">
-                                            <Image Source="{Binding wlt}" VerticalOptions="EndAndExpand" HorizontalOptions="StartAndExpand" />
+                                            <Label Text="{Binding wlt}" FontSize="Medium" TextColor="{Binding wltColor}" VerticalOptions="EndAndExpand" />
+                                        </StackLayout>
+                                        <StackLayout Orientation="Horizontal" Grid.Column="3">
+                                            <Label VerticalOptions="EndAndExpand" Text="{Binding changeStr}" TextColor="{Binding changeColor}" HorizontalOptions="EndAndExpand" FontSize="Medium" />
+                                            <!--<Image HorizontalOptions="EndAndExpand" Source="trash.png" />-->
                                         </StackLayout>
                                     </Grid>
+                                    
                                 </ViewCell>
                             </DataTemplate>
                         </ListView.ItemTemplate>

@@ -38,7 +38,10 @@ namespace ChessApp.Pages
 
         private void AddGameToolBar_Clicked(object sender, EventArgs e)
         {
-            Navigation.PushAsync(new AddGame());
+            Navigation.PushAsync(new AddGame() 
+            { 
+                Title = "Add Game"
+            });
         }
     }
 }
