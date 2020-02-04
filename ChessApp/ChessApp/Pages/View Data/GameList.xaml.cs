@@ -21,6 +21,7 @@ namespace ChessApp.Pages
         protected override async void OnAppearing()
         {
             base.OnAppearing();
+            App.Database.RecalculateRatings().Wait();
             List<Game> _gameList = await App.Database.GetGameListAsync();
             gameView.ItemsSource = _gameList.OrderByDescending(p => p.gDate);
         }

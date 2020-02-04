@@ -16,14 +16,17 @@
                 </Grid.RowDefinitions>
                 
                 <StackLayout>
-                    <Label x:Name="playerNameLabel" />
+                    <StackLayout Orientation="Horizontal">
+                        <Entry FontSize="Title" HorizontalOptions="FillAndExpand" x:Name="PlayerNameEntry" TextChanged="PlayerNameEntry_TextChanged"/>
+                        <Image Source="edit_icon" VerticalOptions="EndAndExpand" x:Name="EditIconName"/>
+                    </StackLayout>
                     <Label x:Name="playerRatingLabel" />
 
                     <Picker x:Name="GraphType" Margin="4" FontSize="Subtitle" SelectedIndexChanged="GraphType_SelectedIndexChanged">
                         <Picker.ItemsSource>
                             <x:Array Type="{x:Type x:String}">
-                                <x:String>Rating</x:String>
-                                <x:String>Win/Loss/Tie</x:String>
+                                <x:String>Rating Graph</x:String>
+                                <x:String>Win/Loss/Tie Graph</x:String>
                             </x:Array>
                         </Picker.ItemsSource>
                         <Picker.SelectedIndex>0</Picker.SelectedIndex>
@@ -62,7 +65,7 @@
                                     <Label Text="Result" TextColor="Black" FontSize="Medium" />
                                 </StackLayout>
                                 <StackLayout Grid.Column="3">
-                                    <Label Text="+/-" TextColor="Black" FontSize="Medium" />
+                                    <Label Text="+/-" TextColor="Black" FontSize="Medium" HorizontalOptions="EndAndExpand" />
                                 </StackLayout>
                             </Grid>
                         </ListView.Header>
@@ -97,7 +100,6 @@
                                         </StackLayout>
                                         <StackLayout Orientation="Horizontal" Grid.Column="3">
                                             <Label VerticalOptions="EndAndExpand" Text="{Binding changeStr}" TextColor="{Binding changeColor}" HorizontalOptions="EndAndExpand" FontSize="Medium" />
-                                            <!--<Image HorizontalOptions="EndAndExpand" Source="trash.png" />-->
                                         </StackLayout>
                                     </Grid>
                                     

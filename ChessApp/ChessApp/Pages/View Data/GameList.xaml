@@ -66,6 +66,9 @@
             </StackLayout>
         </Frame>
     </ContentPage.Content>
+    <NavigationPage.TitleView>
+        <Label Text="Chess Ranker" TextColor="White" FontSize="Title" />
+    </NavigationPage.TitleView>
     <ContentPage.ToolbarItems>
         <ToolbarItem Text="Add Game" x:Name="AddGameToolBarText" Clicked="AddGameToolBar_Clicked" />
         <ToolbarItem Icon="add.png" x:Name="AddGameToolBarIcon" Clicked="AddGameToolBar_Clicked" />

@@ -22,9 +22,14 @@ namespace ChessApp.Pages.View_Data
         {
             InitializeComponent();
             this._player = _player;
-            playerNameLabel.Text = _player.PName;
-            playerNameLabel.FontSize = Device.GetNamedSize(NamedSize.Title, typeof(Label));
-            playerNameLabel.TextColor = Color.Black;
+
+            PlayerNameEntry.Text = _player.PName;
+
+            if (Device.RuntimePlatform == Device.Android)
+            {
+                EditIconName.HeightRequest = 48;
+            }
+
 
             playerRatingLabel.Text = "Rating: " + _player.Rating.ToString();
             playerRatingLabel.FontSize = Device.GetNamedSize(NamedSize.Subtitle, typeof(Label));
@@ -40,6 +45,13 @@ namespace ChessApp.Pages.View_Data
             GetGamesList();
 
             GenerateGraph();
+        }
+
+        protected override void OnDisappearing()
+        {
+            base.OnDisappearing();
+
+            App.Database.UpdatePlayerAsync(_player).Wait();
         }
 
         private async void DeletePlayerButton_Clicked(object sender, EventArgs e)
@@ -366,6 +378,11 @@ namespace ChessApp.Pages.View_Data
                 }
             }
             return oneGameList;
+        }
+
+        private void PlayerNameEntry_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            _player.PName = PlayerNameEntry.Text;
         }
     }
 

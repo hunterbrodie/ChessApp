@@ -56,6 +56,7 @@ namespace ChessApp.Classes
 
         public Task<List<Player>> GetPlayerListAsync()
         {
+            RecalculateRatings().Wait();
             return _database.Table<Player>().ToListAsync();
         }
 
@@ -71,6 +72,7 @@ namespace ChessApp.Classes
 
         public Task<List<Game>> GetGameListAsync()
         {
+            RecalculateRatings().Wait();
             return _database.Table<Game>().ToListAsync();
         }
 

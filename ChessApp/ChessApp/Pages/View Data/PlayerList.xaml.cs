@@ -16,17 +16,6 @@ namespace ChessApp.Pages
         public PlayerList()
         {
             InitializeComponent();
-            /*switch (Device.RuntimePlatform)
-            {
-                case Device.iOS:
-
-                    break;
-                case Device.Android:
-
-                default:
-
-                    break;
-            }*/
         }
 
         protected override async void OnAppearing()
