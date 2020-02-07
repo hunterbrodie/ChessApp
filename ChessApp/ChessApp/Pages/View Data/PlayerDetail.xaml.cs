@@ -18,6 +18,8 @@ namespace ChessApp.Pages.View_Data
         private Player _player;
         private List<Game> _gameList;
         private int[] wlt = { 0, 0, 0 };
+
+
         public PlayerDetail(Player _player)
         {
             InitializeComponent();
@@ -30,17 +32,10 @@ namespace ChessApp.Pages.View_Data
                 EditIconName.HeightRequest = 48;
             }
 
-
-            playerRatingLabel.Text = "Rating: " + _player.Rating.ToString();
-            playerRatingLabel.FontSize = Device.GetNamedSize(NamedSize.Subtitle, typeof(Label));
-            playerRatingLabel.TextColor = Color.Gray;
-
         }
         protected override void OnAppearing()
         {
             base.OnAppearing();
-
-            playerRatingLabel.Text = "Rating: " + _player.Rating.ToString();
 
             GetGamesList();
 
@@ -75,7 +70,6 @@ namespace ChessApp.Pages.View_Data
                 GetGamesList();
 
                 _player = await App.Database.GetPlayerAsync(_player.ID);
-                playerRatingLabel.Text = "Rating: " + _player.Rating.ToString();
 
                 GenerateGraph();
             }
@@ -292,20 +286,22 @@ namespace ChessApp.Pages.View_Data
                 }
             }
 
-
+            string[] picker = { "Rating: " + _player.Rating.ToString(), "Wins/Losses/Ties: " + wlt[0] + "/" + wlt[1] + "/" + wlt[0] };
+            GraphType.ItemsSource = picker;
 
             playerGamesView.ItemsSource = gameViewSrc.OrderByDescending(g => g.gDate);
         }
 
         private void GenerateGraph()
         {
-            if (_gameList != null)
+            if (_gameList != null && GraphType.SelectedItem != null)
             {
-                if (GraphType.SelectedItem.Equals("Rating"))
+                if (GraphType.SelectedItem.ToString().Substring(0, 6).Equals("Rating"))
                 {
                     List<Microcharts.Entry> entries = new List<Microcharts.Entry>();
                     List<Game> gameDayList = oneGameDay(_gameList);
                     gameDayList = gameDayList.OrderByDescending(g => g.gDate).ToList();
+                    
 
                     double curRating = _player.Rating;
 
@@ -337,7 +333,7 @@ namespace ChessApp.Pages.View_Data
                     }
 
                     entries.Reverse();
-
+                    
                     playerChartView.Chart = new LineChart() { Entries = entries, LabelTextSize = 28 };
                 }
                 else

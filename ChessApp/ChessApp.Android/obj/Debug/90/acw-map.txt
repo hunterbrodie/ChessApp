@@ -1,9 +1,6 @@
 ChessApp.Droid.MainActivity, ChessApp.Android;crc64b1226c731a2261a2.MainActivity
 ChessApp.Droid.MainActivity;crc64b1226c731a2261a2.MainActivity
 chessapp.droid.MainActivity;crc64b1226c731a2261a2.MainActivity
-Microcharts.Droid.ChartView, Microcharts.Droid;crc64e9f97cf19b8286a9.ChartView
-Microcharts.Droid.ChartView;crc64e9f97cf19b8286a9.ChartView
-microcharts.droid.ChartView;crc64e9f97cf19b8286a9.ChartView
 SkiaSharp.Views.Android.SKCanvasView, SkiaSharp.Views.Android;crc648e35430423bd4943.SKCanvasView
 SkiaSharp.Views.Android.SKCanvasView;crc648e35430423bd4943.SKCanvasView
 skiasharp.views.android.SKCanvasView;crc648e35430423bd4943.SKCanvasView

@@ -6,7 +6,6 @@ public class MonoPackageManager_Resources {
 		"ChessApp.dll",
 		"FormsViewGroup.dll",
 		"Microcharts.dll",
-		"Microcharts.Droid.dll",
 		"Microcharts.Forms.dll",
 		"SkiaSharp.dll",
 		"SkiaSharp.Views.Android.dll",

@@ -9,8 +9,7 @@
     ".NETStandard,Version=v2.0/": {
       "ChessApp/1.0.0": {
         "dependencies": {
-          "Microcharts": "0.7.1",
-          "Microcharts.Forms": "0.7.1",
+          "MoneyFox.Microcharts.Forms": "1.1.0.1",
           "NETStandard.Library": "2.0.3",
           "Xamarin.Essentials": "1.3.1",
           "Xamarin.Forms": "4.3.0.908675",
@@ -22,32 +21,33 @@
           "ChessApp.dll": {}
         }
       },
-      "Microcharts/0.7.1": {
+      "Microsoft.NETCore.Platforms/1.1.0": {},
+      "MoneyFox.Microcharts/1.1.0.1": {
         "dependencies": {
           "SkiaSharp": "1.59.1",
+          "StyleCop.MSBuild": "5.0.0",
           "System.ValueTuple": "4.4.0"
         },
         "runtime": {
-          "lib/netstandard1.4/Microcharts.dll": {
-            "assemblyVersion": "1.0.0.0",
-            "fileVersion": "1.0.0.0"
+          "lib/netstandard2.0/Microcharts.dll": {
+            "assemblyVersion": "1.1.0.1",
+            "fileVersion": "1.1.0.1"
           }
         }
       },
-      "Microcharts.Forms/0.7.1": {
+      "MoneyFox.Microcharts.Forms/1.1.0.1": {
         "dependencies": {
+          "MoneyFox.Microcharts": "1.1.0.1",
           "SkiaSharp.Views.Forms": "1.59.1.1",
-          "System.ValueTuple": "4.4.0",
           "Xamarin.Forms": "4.3.0.908675"
         },
         "runtime": {
-          "lib/netstandard1.4/Microcharts.Forms.dll": {
-            "assemblyVersion": "1.0.0.0",
-            "fileVersion": "1.0.0.0"
+          "lib/netstandard2.0/Microcharts.Forms.dll": {
+            "assemblyVersion": "1.1.0.1",
+            "fileVersion": "1.1.0.1"
           }
         }
       },
-      "Microsoft.NETCore.Platforms/1.1.0": {},
       "NETStandard.Library/2.0.3": {
         "dependencies": {
           "Microsoft.NETCore.Platforms": "1.1.0"
@@ -112,6 +112,7 @@
           }
         }
       },
+      "StyleCop.MSBuild/5.0.0": {},
       "System.Numerics.Vectors/4.5.0": {
         "runtime": {
           "lib/netstandard2.0/System.Numerics.Vectors.dll": {
@@ -276,26 +277,26 @@
       "serviceable": false,
       "sha512": ""
     },
-    "Microcharts/0.7.1": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-Py79bYXqvsqthZtk1ChdDhy/n4mb7T2CKjzTVU7ldj4dnjgFC2nbOJMGeAJkDk1lZPoQPSPx3obSq7S29Zrt8g==",
-      "path": "microcharts/0.7.1",
-      "hashPath": "microcharts.0.7.1.nupkg.sha512"
-    },
-    "Microcharts.Forms/0.7.1": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-/oeY4j/x3I8PY6sNV3B6CHKdvZl3cJHxfkxIKSPaX86bc50mq1C0L+LqVnbRMwMa1PpywPtwL1+aqlKGM8bL3w==",
-      "path": "microcharts.forms/0.7.1",
-      "hashPath": "microcharts.forms.0.7.1.nupkg.sha512"
-    },
     "Microsoft.NETCore.Platforms/1.1.0": {
       "type": "package",
       "serviceable": true,
       "sha512": "sha512-kz0PEW2lhqygehI/d6XsPCQzD7ff7gUJaVGPVETX611eadGsA3A877GdSlU0LRVMCTH/+P3o2iDTak+S08V2+A==",
       "path": "microsoft.netcore.platforms/1.1.0",
       "hashPath": "microsoft.netcore.platforms.1.1.0.nupkg.sha512"
+    },
+    "MoneyFox.Microcharts/1.1.0.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-oSNgKQEsKsviJfayAOHnwdrj5bd0pQu+fdN/byBI5r3wPCbqXcS2H0EcklHL0JfCEYlwhcXa2++vecAZqV1Fqw==",
+      "path": "moneyfox.microcharts/1.1.0.1",
+      "hashPath": "moneyfox.microcharts.1.1.0.1.nupkg.sha512"
+    },
+    "MoneyFox.Microcharts.Forms/1.1.0.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-4zimdR4zOEqLUGM4OgHLjrKqJ874pi9K6cixm1ld/IWiwEs6cSM+Bf0ZPiuz6jQ7i+dwuamqL+QdvTxnoNjzAg==",
+      "path": "moneyfox.microcharts.forms/1.1.0.1",
+      "hashPath": "moneyfox.microcharts.forms.1.1.0.1.nupkg.sha512"
     },
     "NETStandard.Library/2.0.3": {
       "type": "package",
@@ -338,6 +339,13 @@
       "sha512": "sha512-I8Q9qL1urPegoyZ5uI32lgqsxl8aPRZAyVBJbO+0T/zlGz/LBc8vhRVyDyCOU9LWWpV8dYpT0nCpuLv1ua6zkA==",
       "path": "sqlitepclraw.core/1.1.13",
       "hashPath": "sqlitepclraw.core.1.1.13.nupkg.sha512"
+    },
+    "StyleCop.MSBuild/5.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-9FwYUg4/ODk7oHEEulbjdNQi2s/IaG+JB52hvCORhktJLFCN44KERH2fEwrE6Uk9SuZbBrUB2hKMDI+3ZC+QyQ==",
+      "path": "stylecop.msbuild/5.0.0",
+      "hashPath": "stylecop.msbuild.5.0.0.nupkg.sha512"
     },
     "System.Numerics.Vectors/4.5.0": {
       "type": "package",

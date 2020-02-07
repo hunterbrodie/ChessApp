@@ -2,33 +2,6 @@
   "version": 3,
   "targets": {
     ".NETStandard,Version=v2.0": {
-      "Microcharts/0.7.1": {
-        "type": "package",
-        "dependencies": {
-          "SkiaSharp": "1.59.1",
-          "System.ValueTuple": "4.4.0"
-        },
-        "compile": {
-          "lib/netstandard1.4/Microcharts.dll": {}
-        },
-        "runtime": {
-          "lib/netstandard1.4/Microcharts.dll": {}
-        }
-      },
-      "Microcharts.Forms/0.7.1": {
-        "type": "package",
-        "dependencies": {
-          "SkiaSharp.Views.Forms": "1.59.1.1",
-          "System.ValueTuple": "4.4.0",
-          "Xamarin.Forms": "2.4.0.280"
-        },
-        "compile": {
-          "lib/netstandard1.4/Microcharts.Forms.dll": {}
-        },
-        "runtime": {
-          "lib/netstandard1.4/Microcharts.Forms.dll": {}
-        }
-      },
       "Microsoft.NETCore.Platforms/1.1.0": {
         "type": "package",
         "compile": {
@@ -36,6 +9,34 @@
         },
         "runtime": {
           "lib/netstandard1.0/_._": {}
+        }
+      },
+      "MoneyFox.Microcharts/1.1.0.1": {
+        "type": "package",
+        "dependencies": {
+          "SkiaSharp": "1.59.1",
+          "StyleCop.MSBuild": "5.0.0",
+          "System.ValueTuple": "4.4.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/Microcharts.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microcharts.dll": {}
+        }
+      },
+      "MoneyFox.Microcharts.Forms/1.1.0.1": {
+        "type": "package",
+        "dependencies": {
+          "MoneyFox.Microcharts": "1.1.0.1",
+          "SkiaSharp.Views.Forms": "1.59.1.1",
+          "Xamarin.Forms": "2.4.0.280"
+        },
+        "compile": {
+          "lib/netstandard2.0/Microcharts.Forms.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microcharts.Forms.dll": {}
         }
       },
       "NETStandard.Library/2.0.3": {
@@ -129,6 +130,12 @@
           "lib/netstandard1.1/SQLitePCLRaw.core.dll": {}
         }
       },
+      "StyleCop.MSBuild/5.0.0": {
+        "type": "package",
+        "build": {
+          "build/_._": {}
+        }
+      },
       "System.Numerics.Vectors/4.5.0": {
         "type": "package",
         "compile": {
@@ -179,38 +186,6 @@
     }
   },
   "libraries": {
-    "Microcharts/0.7.1": {
-      "sha512": "Py79bYXqvsqthZtk1ChdDhy/n4mb7T2CKjzTVU7ldj4dnjgFC2nbOJMGeAJkDk1lZPoQPSPx3obSq7S29Zrt8g==",
-      "type": "package",
-      "path": "microcharts/0.7.1",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "lib/MonoAndroid10/Microcharts.Droid.dll",
-        "lib/MonoAndroid10/Microcharts.dll",
-        "lib/Xamarin.iOS10/Microcharts.dll",
-        "lib/Xamarin.iOS10/Microcharts.iOS.dll",
-        "lib/netstandard1.4/Microcharts.dll",
-        "lib/uap/Microcharts.Uwp.dll",
-        "lib/uap/Microcharts.dll",
-        "lib/xamarinmac/Microcharts.dll",
-        "lib/xamarinmac/Microcharts.macOS.dll",
-        "microcharts.0.7.1.nupkg.sha512",
-        "microcharts.nuspec"
-      ]
-    },
-    "Microcharts.Forms/0.7.1": {
-      "sha512": "/oeY4j/x3I8PY6sNV3B6CHKdvZl3cJHxfkxIKSPaX86bc50mq1C0L+LqVnbRMwMa1PpywPtwL1+aqlKGM8bL3w==",
-      "type": "package",
-      "path": "microcharts.forms/0.7.1",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "lib/netstandard1.4/Microcharts.Forms.dll",
-        "microcharts.forms.0.7.1.nupkg.sha512",
-        "microcharts.forms.nuspec"
-      ]
-    },
     "Microsoft.NETCore.Platforms/1.1.0": {
       "sha512": "kz0PEW2lhqygehI/d6XsPCQzD7ff7gUJaVGPVETX611eadGsA3A877GdSlU0LRVMCTH/+P3o2iDTak+S08V2+A==",
       "type": "package",
@@ -224,6 +199,32 @@
         "microsoft.netcore.platforms.1.1.0.nupkg.sha512",
         "microsoft.netcore.platforms.nuspec",
         "runtime.json"
+      ]
+    },
+    "MoneyFox.Microcharts/1.1.0.1": {
+      "sha512": "oSNgKQEsKsviJfayAOHnwdrj5bd0pQu+fdN/byBI5r3wPCbqXcS2H0EcklHL0JfCEYlwhcXa2++vecAZqV1Fqw==",
+      "type": "package",
+      "path": "moneyfox.microcharts/1.1.0.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE",
+        "lib/netstandard2.0/Microcharts.dll",
+        "moneyfox.microcharts.1.1.0.1.nupkg.sha512",
+        "moneyfox.microcharts.nuspec"
+      ]
+    },
+    "MoneyFox.Microcharts.Forms/1.1.0.1": {
+      "sha512": "4zimdR4zOEqLUGM4OgHLjrKqJ874pi9K6cixm1ld/IWiwEs6cSM+Bf0ZPiuz6jQ7i+dwuamqL+QdvTxnoNjzAg==",
+      "type": "package",
+      "path": "moneyfox.microcharts.forms/1.1.0.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE",
+        "lib/netstandard2.0/Microcharts.Forms.dll",
+        "moneyfox.microcharts.forms.1.1.0.1.nupkg.sha512",
+        "moneyfox.microcharts.forms.nuspec"
       ]
     },
     "NETStandard.Library/2.0.3": {
@@ -501,6 +502,37 @@
         "lib/wpa81/SQLitePCLRaw.core.dll",
         "sqlitepclraw.core.1.1.13.nupkg.sha512",
         "sqlitepclraw.core.nuspec"
+      ]
+    },
+    "StyleCop.MSBuild/5.0.0": {
+      "sha512": "9FwYUg4/ODk7oHEEulbjdNQi2s/IaG+JB52hvCORhktJLFCN44KERH2fEwrE6Uk9SuZbBrUB2hKMDI+3ZC+QyQ==",
+      "type": "package",
+      "path": "stylecop.msbuild/5.0.0",
+      "hasTools": true,
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "build/StyleCop.MSBuild.targets",
+        "license.txt",
+        "stylecop.msbuild.5.0.0.nupkg.sha512",
+        "stylecop.msbuild.nuspec",
+        "tools/CustomDictionary.en-GB.xml",
+        "tools/CustomDictionary.en-US.xml",
+        "tools/CustomDictionary.xml",
+        "tools/Settings.StyleCop",
+        "tools/StyleCop.CSharp.Rules.dll",
+        "tools/StyleCop.CSharp.dll",
+        "tools/StyleCop.SettingsEditor.exe",
+        "tools/StyleCop.dll",
+        "tools/de-DE/StyleCop.CSharp.Rules.resources.dll",
+        "tools/en-GB/StyleCop.CSharp.Rules.resources.dll",
+        "tools/es-MX/StyleCop.CSharp.Rules.resources.dll",
+        "tools/fr-FR/StyleCop.CSharp.Rules.resources.dll",
+        "tools/mssp7en.dll",
+        "tools/mssp7en.lex",
+        "tools/pl-PL/StyleCop.CSharp.Rules.resources.dll",
+        "tools/pt-BR/StyleCop.CSharp.Rules.resources.dll",
+        "tools/ru-RU/StyleCop.CSharp.Rules.resources.dll"
       ]
     },
     "System.Numerics.Vectors/4.5.0": {
@@ -898,8 +930,7 @@
   },
   "projectFileDependencyGroups": {
     ".NETStandard,Version=v2.0": [
-      "Microcharts >= 0.7.1",
-      "Microcharts.Forms >= 0.7.1",
+      "MoneyFox.Microcharts.Forms >= 1.1.0.1",
       "NETStandard.Library >= 2.0.3",
       "Xamarin.Essentials >= 1.3.1",
       "Xamarin.Forms >= 4.3.0.908675",
@@ -950,13 +981,9 @@
     "frameworks": {
       "netstandard2.0": {
         "dependencies": {
-          "Microcharts": {
+          "MoneyFox.Microcharts.Forms": {
             "target": "Package",
-            "version": "[0.7.1, )"
-          },
-          "Microcharts.Forms": {
-            "target": "Package",
-            "version": "[0.7.1, )"
+            "version": "[1.1.0.1, )"
           },
           "NETStandard.Library": {
             "suppressParent": "All",

@@ -10,7 +10,7 @@
         <Frame HasShadow="False">
             <Grid>
                 <Grid.RowDefinitions>
-                    <RowDefinition Height="4*" />
+                    <RowDefinition Height="3*" />
                     <RowDefinition Height="5*" />
                     <RowDefinition Height="8*" />
                 </Grid.RowDefinitions>
@@ -20,17 +20,7 @@
                         <Entry FontSize="Title" HorizontalOptions="FillAndExpand" x:Name="PlayerNameEntry" TextChanged="PlayerNameEntry_TextChanged"/>
                         <Image Source="edit_icon" VerticalOptions="EndAndExpand" x:Name="EditIconName"/>
                     </StackLayout>
-                    <Label x:Name="playerRatingLabel" />
-
-                    <Picker x:Name="GraphType" Margin="4" FontSize="Subtitle" SelectedIndexChanged="GraphType_SelectedIndexChanged">
-                        <Picker.ItemsSource>
-                            <x:Array Type="{x:Type x:String}">
-                                <x:String>Rating Graph</x:String>
-                                <x:String>Win/Loss/Tie Graph</x:String>
-                            </x:Array>
-                        </Picker.ItemsSource>
-                        <Picker.SelectedIndex>0</Picker.SelectedIndex>
-                    </Picker>
+                    <Picker x:Name="GraphType" Margin="4" FontSize="Subtitle" Title="Select graph type" SelectedIndexChanged="GraphType_SelectedIndexChanged"/>
                 </StackLayout>
 
                 <microcharts:ChartView x:Name="playerChartView" Grid.Row="1" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" />
