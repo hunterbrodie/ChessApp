@@ -939,8 +939,7 @@
   },
   "packageFolders": {
     "C:\\Users\\Hunter\\.nuget\\packages\\": {},
-    "C:\\Microsoft\\Xamarin\\NuGet\\": {},
-    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
+    "C:\\Microsoft\\Xamarin\\NuGet\\": {}
   },
   "project": {
     "version": "1.0.0",
@@ -952,8 +951,7 @@
       "outputPath": "C:\\Users\\Hunter\\Documents\\GitHub\\ChessApp\\ChessApp\\ChessApp\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "C:\\Microsoft\\Xamarin\\NuGet\\",
-        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        "C:\\Microsoft\\Xamarin\\NuGet\\"
       ],
       "configFilePaths": [
         "C:\\Users\\Hunter\\AppData\\Roaming\\NuGet\\NuGet.Config",

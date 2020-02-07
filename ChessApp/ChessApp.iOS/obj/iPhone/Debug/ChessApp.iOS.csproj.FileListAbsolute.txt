@@ -1,7 +1,6 @@
 C:\Users\Hunter\Documents\GitHub\ChessApp\ChessApp\ChessApp.iOS\bin\iPhone\Debug\ChessApp.iOS.exe
 C:\Users\Hunter\Documents\GitHub\ChessApp\ChessApp\ChessApp.iOS\bin\iPhone\Debug\ChessApp.iOS.pdb
 C:\Users\Hunter\Documents\GitHub\ChessApp\ChessApp\ChessApp.iOS\bin\iPhone\Debug\Microcharts.dll
-C:\Users\Hunter\Documents\GitHub\ChessApp\ChessApp\ChessApp.iOS\bin\iPhone\Debug\Microcharts.iOS.dll
 C:\Users\Hunter\Documents\GitHub\ChessApp\ChessApp\ChessApp.iOS\bin\iPhone\Debug\Microcharts.Forms.dll
 C:\Users\Hunter\Documents\GitHub\ChessApp\ChessApp\ChessApp.iOS\bin\iPhone\Debug\SkiaSharp.dll
 C:\Users\Hunter\Documents\GitHub\ChessApp\ChessApp\ChessApp.iOS\bin\iPhone\Debug\SkiaSharp.Views.iOS.dll
@@ -68,8 +67,16 @@ C:\Users\Hunter\Documents\GitHub\ChessApp\ChessApp\ChessApp.iOS\obj\iPhone\Debug
 C:\Users\Hunter\Documents\GitHub\ChessApp\ChessApp\ChessApp.iOS\obj\iPhone\Debug\edit69.png.ResolveUTIs.stamp
 C:\Users\Hunter\Documents\GitHub\ChessApp\ChessApp\ChessApp.iOS\obj\iPhone\Debug\games481.png.ResolveUTIs.stamp
 C:\Users\Hunter\Documents\GitHub\ChessApp\ChessApp\ChessApp.iOS\obj\iPhone\Debug\games691.png.ResolveUTIs.stamp
+C:\Users\Hunter\Documents\GitHub\ChessApp\ChessApp\ChessApp.iOS\obj\iPhone\Debug\loss48.png.ResolveUTIs.stamp
+C:\Users\Hunter\Documents\GitHub\ChessApp\ChessApp\ChessApp.iOS\obj\iPhone\Debug\loss69.png.ResolveUTIs.stamp
+C:\Users\Hunter\Documents\GitHub\ChessApp\ChessApp\ChessApp.iOS\obj\iPhone\Debug\tie48.png.ResolveUTIs.stamp
+C:\Users\Hunter\Documents\GitHub\ChessApp\ChessApp\ChessApp.iOS\obj\iPhone\Debug\tie69.png.ResolveUTIs.stamp
+C:\Users\Hunter\Documents\GitHub\ChessApp\ChessApp\ChessApp.iOS\obj\iPhone\Debug\trash48.png.ResolveUTIs.stamp
+C:\Users\Hunter\Documents\GitHub\ChessApp\ChessApp\ChessApp.iOS\obj\iPhone\Debug\trash69.png.ResolveUTIs.stamp
 C:\Users\Hunter\Documents\GitHub\ChessApp\ChessApp\ChessApp.iOS\obj\iPhone\Debug\rankings48.png.ResolveUTIs.stamp
 C:\Users\Hunter\Documents\GitHub\ChessApp\ChessApp\ChessApp.iOS\obj\iPhone\Debug\rankings69.png.ResolveUTIs.stamp
+C:\Users\Hunter\Documents\GitHub\ChessApp\ChessApp\ChessApp.iOS\obj\iPhone\Debug\win48.png.ResolveUTIs.stamp
+C:\Users\Hunter\Documents\GitHub\ChessApp\ChessApp\ChessApp.iOS\obj\iPhone\Debug\win69.png.ResolveUTIs.stamp
 C:\Users\Hunter\Documents\GitHub\ChessApp\ChessApp\ChessApp.iOS\obj\iPhone\Debug\chessicon1024.png.ResolveUTIs.stamp
 C:\Users\Hunter\Documents\GitHub\ChessApp\ChessApp\ChessApp.iOS\obj\iPhone\Debug\chessicon120.png.ResolveUTIs.stamp
 C:\Users\Hunter\Documents\GitHub\ChessApp\ChessApp\ChessApp.iOS\obj\iPhone\Debug\chessicon1201.png.ResolveUTIs.stamp
@@ -97,7 +104,6 @@ C:\Users\Hunter\Documents\GitHub\ChessApp\ChessApp\ChessApp.iOS\obj\iPhone\Debug
 C:\Users\Hunter\Documents\GitHub\ChessApp\ChessApp\ChessApp.iOS\obj\iPhone\Debug\ChessApp.iOS.exe
 C:\Users\Hunter\Documents\GitHub\ChessApp\ChessApp\ChessApp.iOS\obj\iPhone\Debug\ChessApp.iOS.pdb
 C:\Users\Hunter\Documents\GitHub\ChessApp\ChessApp\ChessApp.iOS\obj\iPhone\Debug\CopyFilesToMac\Microcharts.dll.ReferenceCopyLocalPaths.stamp
-C:\Users\Hunter\Documents\GitHub\ChessApp\ChessApp\ChessApp.iOS\obj\iPhone\Debug\CopyFilesToMac\Microcharts.iOS.dll.ReferenceCopyLocalPaths.stamp
 C:\Users\Hunter\Documents\GitHub\ChessApp\ChessApp\ChessApp.iOS\obj\iPhone\Debug\CopyFilesToMac\Microcharts.Forms.dll.ReferenceCopyLocalPaths.stamp
 C:\Users\Hunter\Documents\GitHub\ChessApp\ChessApp\ChessApp.iOS\obj\iPhone\Debug\CopyFilesToMac\SkiaSharp.dll.ReferenceCopyLocalPaths.stamp
 C:\Users\Hunter\Documents\GitHub\ChessApp\ChessApp\ChessApp.iOS\obj\iPhone\Debug\CopyFilesToMac\SkiaSharp.Views.iOS.dll.ReferenceCopyLocalPaths.stamp
@@ -123,11 +129,3 @@ C:\Users\Hunter\Documents\GitHub\ChessApp\ChessApp\ChessApp.iOS\obj\iPhone\Debug
 C:\Users\Hunter\Documents\GitHub\ChessApp\ChessApp\ChessApp.iOS\obj\iPhone\Debug\CopyFilesToMac\ChessApp.iOS.pdb.DebugSymbolsProjectOutputGroupOutput.stamp
 C:\Users\Hunter\Documents\GitHub\ChessApp\ChessApp\ChessApp.iOS\obj\iPhone\Debug\CopyFilesToMac\Entitlements.plist.NoneOutput.stamp
 C:\Users\Hunter\Documents\GitHub\ChessApp\ChessApp\ChessApp.iOS\obj\iPhone\Debug\CopyFilesToMac\Info.plist.NoneOutput.stamp
-C:\Users\Hunter\Documents\GitHub\ChessApp\ChessApp\ChessApp.iOS\obj\iPhone\Debug\loss48.png.ResolveUTIs.stamp
-C:\Users\Hunter\Documents\GitHub\ChessApp\ChessApp\ChessApp.iOS\obj\iPhone\Debug\loss69.png.ResolveUTIs.stamp
-C:\Users\Hunter\Documents\GitHub\ChessApp\ChessApp\ChessApp.iOS\obj\iPhone\Debug\tie48.png.ResolveUTIs.stamp
-C:\Users\Hunter\Documents\GitHub\ChessApp\ChessApp\ChessApp.iOS\obj\iPhone\Debug\tie69.png.ResolveUTIs.stamp
-C:\Users\Hunter\Documents\GitHub\ChessApp\ChessApp\ChessApp.iOS\obj\iPhone\Debug\win48.png.ResolveUTIs.stamp
-C:\Users\Hunter\Documents\GitHub\ChessApp\ChessApp\ChessApp.iOS\obj\iPhone\Debug\win69.png.ResolveUTIs.stamp
-C:\Users\Hunter\Documents\GitHub\ChessApp\ChessApp\ChessApp.iOS\obj\iPhone\Debug\trash48.png.ResolveUTIs.stamp
-C:\Users\Hunter\Documents\GitHub\ChessApp\ChessApp\ChessApp.iOS\obj\iPhone\Debug\trash69.png.ResolveUTIs.stamp

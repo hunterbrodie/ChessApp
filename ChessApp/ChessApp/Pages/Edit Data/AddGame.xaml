@@ -9,7 +9,7 @@
         <Frame HasShadow="False">
             <StackLayout>
                 <Label Text="Add Game" FontSize="Title" TextColor="Black" HorizontalOptions="Center" TextDecorations="Underline" />
-                <Picker FontSize="Subtitle" x:Name="Player1" Title="Player 1" Margin="8" >
+                <Picker FontSize="Subtitle" x:Name="Player1" Title="White" Margin="8" >
                     <Picker.ItemsSource>
                     </Picker.ItemsSource>
                 </Picker>
@@ -22,7 +22,7 @@
                         </x:Array>
                     </Picker.ItemsSource>
                 </Picker>
-                <Picker FontSize="Subtitle" x:Name="Player2" Title="Player 2" Margin="8" >
+                <Picker FontSize="Subtitle" x:Name="Player2" Title="Black" Margin="8" >
                     <Picker.ItemsSource>
                     </Picker.ItemsSource>
                 </Picker>

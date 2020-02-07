@@ -28,12 +28,22 @@ namespace ChessApp.Pages
 
         private async void gameView_ItemSelected(object sender, SelectedItemChangedEventArgs e)
         {
-            if (await DisplayAlert("WARNING", "This delete the game, continue?", "Yes, delete", "Cancel"))
+            /*if (await DisplayAlert("WARNING", "This delete the game, continue?", "Yes, delete", "Cancel"))
             {
                 App.Database.DeleteGame((Game)(gameView.SelectedItem));
                 await DisplayAlert("Info", "Game deleted", "OK");
                 List<Game> _gameList = await App.Database.GetGameListAsync();
                 gameView.ItemsSource = _gameList.OrderByDescending(p => p.gDate);
+            }*/
+            if (await DisplayAlert("Game Info", ((Game)(gameView.SelectedItem)).Disp, "Delete?", "Back"))
+            {
+                if (await DisplayAlert("WARNING", "This delete the game, continue?", "Yes, delete", "Cancel"))
+                {
+                    App.Database.DeleteGame((Game)(gameView.SelectedItem));
+                    await DisplayAlert("Info", "Game deleted", "OK");
+                    List<Game> _gameList = await App.Database.GetGameListAsync();
+                    gameView.ItemsSource = _gameList.OrderByDescending(p => p.gDate);
+                }
             }
         }
 

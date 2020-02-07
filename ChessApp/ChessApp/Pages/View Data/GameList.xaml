@@ -54,7 +54,7 @@
 
                                     <StackLayout Orientation="Horizontal" Grid.Column="1">
                                         <StackLayout>
-                                            <Label Text="{Binding Disp}" TextColor="Black" FontSize="Medium" VerticalOptions="EndAndExpand"/>
+                                            <Label Text="{Binding shortDisp}" TextColor="Black" FontSize="Medium" VerticalOptions="EndAndExpand"/>
                                         </StackLayout>
                                         <Image Source="trash.png" HorizontalOptions="EndAndExpand" VerticalOptions="Center" />
                                     </StackLayout>

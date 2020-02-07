@@ -69,6 +69,35 @@ namespace ChessApp.Classes
 
                 disp += App.Database.GetPlayerAsync(p2ID).Result.PName + " (" + p2Rating + ")";
 
+                disp += " on " + gDate.ToString();
+
+                return disp;
+            }
+        }
+
+        public string shortDisp
+        {
+            get
+            {
+                string disp = "";
+
+                disp += App.Database.GetPlayerAsync(p1ID).Result.PName;
+
+                if (p1Result == 1)
+                {
+                    disp += " won against ";
+                }
+                else if (p1Result == 0)
+                {
+                    disp += " lost to ";
+                }
+                else
+                {
+                    disp += " tied with ";
+                }
+
+                disp += App.Database.GetPlayerAsync(p2ID).Result.PName;
+
                 return disp;
             }
         }

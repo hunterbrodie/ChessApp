@@ -18,6 +18,9 @@ namespace ChessApp.Pages.View_Data
         private Player _player;
         private List<Game> _gameList;
         private int[] wlt = { 0, 0, 0 };
+        private int[] whiteWLT = { 0, 0, 0 };
+        private int[] blackWLT = { 0, 0, 0 };
+
 
 
         public PlayerDetail(Player _player)
@@ -26,11 +29,7 @@ namespace ChessApp.Pages.View_Data
             this._player = _player;
 
             PlayerNameEntry.Text = _player.PName;
-
-            if (Device.RuntimePlatform == Device.Android)
-            {
-                EditIconName.HeightRequest = 48;
-            }
+            EditIconName.HeightRequest = 48;
 
         }
         protected override void OnAppearing()
@@ -101,6 +100,7 @@ namespace ChessApp.Pages.View_Data
                     if (_gameList[x].p1Result == 1)
                     {
                         wlt[0]++;
+                        whiteWLT[0]++;
 
                         double change;
 
@@ -132,6 +132,7 @@ namespace ChessApp.Pages.View_Data
                     else if (_gameList[x].p1Result == 0)
                     {
                         wlt[1]++;
+                        whiteWLT[1]++;
 
                         double change;
 
@@ -162,6 +163,7 @@ namespace ChessApp.Pages.View_Data
                     else
                     {
                         wlt[2]++;
+                        whiteWLT[2]++;
 
                         double change;
 
@@ -196,6 +198,7 @@ namespace ChessApp.Pages.View_Data
                     if (_gameList[x].p1Result == 1)
                     {
                         wlt[1]++;
+                        blackWLT[1]++;
 
                         double change;
 
@@ -226,6 +229,7 @@ namespace ChessApp.Pages.View_Data
                     else if (_gameList[x].p1Result == 0)
                     {
                         wlt[0]++;
+                        blackWLT[0]++;
 
                         double change;
 
@@ -256,6 +260,7 @@ namespace ChessApp.Pages.View_Data
                     else
                     {
                         wlt[2]++;
+                        blackWLT[2]++;
 
                         double change;
 
@@ -286,7 +291,7 @@ namespace ChessApp.Pages.View_Data
                 }
             }
 
-            string[] picker = { "Rating: " + _player.Rating.ToString(), "Wins/Losses/Ties: " + wlt[0] + "/" + wlt[1] + "/" + wlt[0] };
+            string[] picker = { "Rating: " + _player.Rating.ToString(), "Wins/Losses/Ties: " + wlt[0] + "/" + wlt[1] + "/" + wlt[0], "White/Black Stats" };
             GraphType.ItemsSource = picker;
 
             playerGamesView.ItemsSource = gameViewSrc.OrderByDescending(g => g.gDate);
@@ -335,6 +340,10 @@ namespace ChessApp.Pages.View_Data
                     entries.Reverse();
                     
                     playerChartView.Chart = new LineChart() { Entries = entries, LabelTextSize = 28 };
+                }
+                else if (GraphType.SelectedItem.ToString().Equals("White/Black Stats"))
+                {
+
                 }
                 else
                 {
