@@ -98,7 +98,7 @@ namespace ChessApp.Pages.View_Data
                 {
                     if (_gameList[x].p1Result == 1)
                     {
-                        wlt[0]++;
+                        
                         whiteWLT[0]++;
 
                         double change;
@@ -130,7 +130,6 @@ namespace ChessApp.Pages.View_Data
                     }
                     else if (_gameList[x].p1Result == 0)
                     {
-                        wlt[1]++;
                         whiteWLT[1]++;
 
                         double change;
@@ -161,7 +160,6 @@ namespace ChessApp.Pages.View_Data
                     }
                     else
                     {
-                        wlt[2]++;
                         whiteWLT[2]++;
 
                         double change;
@@ -196,7 +194,6 @@ namespace ChessApp.Pages.View_Data
                 {
                     if (_gameList[x].p1Result == 1)
                     {
-                        wlt[1]++;
                         blackWLT[1]++;
 
                         double change;
@@ -227,7 +224,6 @@ namespace ChessApp.Pages.View_Data
                     }
                     else if (_gameList[x].p1Result == 0)
                     {
-                        wlt[0]++;
                         blackWLT[0]++;
 
                         double change;
@@ -258,7 +254,6 @@ namespace ChessApp.Pages.View_Data
                     }
                     else
                     {
-                        wlt[2]++;
                         blackWLT[2]++;
 
                         double change;
@@ -290,7 +285,7 @@ namespace ChessApp.Pages.View_Data
                 }
             }
 
-            string[] picker = { "Rating: " + _player.Rating.ToString(), "Wins/Losses/Ties: " + wlt[0] + "/" + wlt[1] + "/" + wlt[0], "White/Black Stats" };
+            string[] picker = { "Rating: " + _player.Rating.ToString(), "Wins/Losses/Ties", "White/Black Stats" };
             GraphType.ItemsSource = picker;
 
             playerGamesView.ItemsSource = gameViewSrc.OrderByDescending(g => g.gDate);
@@ -361,23 +356,23 @@ namespace ChessApp.Pages.View_Data
                         ValueLabel = whiteWLT[2].ToString(),
                         Color = SKColor.Parse("#AEC6CF")
                     };
-                    entries[3] = new Microcharts.Entry(blackWLT[0])
+                    entries[5] = new Microcharts.Entry(blackWLT[0])
                     {
                         Label = "Black Wins",
                         ValueLabel = blackWLT[0].ToString(),
-                        Color = SKColor.Parse("#AEC6CF")
+                        Color = SKColor.Parse("#1d731d")
                     };
                     entries[4] = new Microcharts.Entry(blackWLT[1])
                     {
                         Label = "Black Losses",
                         ValueLabel = blackWLT[1].ToString(),
-                        Color = SKColor.Parse("#AEC6CF")
+                        Color = SKColor.Parse("#9c0800")
                     };
-                    entries[5] = new Microcharts.Entry(blackWLT[2])
+                    entries[3] = new Microcharts.Entry(blackWLT[2])
                     {
                         Label = "Black Ties",
                         ValueLabel = blackWLT[2].ToString(),
-                        Color = SKColor.Parse("#AEC6CF")
+                        Color = SKColor.Parse("#36515b")
                     };
 
                     playerChartView.Chart = new DonutChart() { Entries = entries, LabelTextSize = 28 };
@@ -388,19 +383,19 @@ namespace ChessApp.Pages.View_Data
                     entries[0] = new Microcharts.Entry(blackWLT[0] + whiteWLT[0])
                     {
                         Label = "Wins",
-                        ValueLabel = wlt[0].ToString(),
+                        ValueLabel = (whiteWLT[0] + blackWLT[0]).ToString(),
                         Color = SKColor.Parse("#77dd77")
                     };
-                    entries[1] = new Microcharts.Entry(wlt[1])
+                    entries[1] = new Microcharts.Entry((whiteWLT[1] + blackWLT[1]))
                     {
                         Label = "Losses",
-                        ValueLabel = wlt[1].ToString(),
+                        ValueLabel = (whiteWLT[1] + blackWLT[1]).ToString(),
                         Color = SKColor.Parse("#ff6961")
                     };
-                    entries[2] = new Microcharts.Entry(wlt[2])
+                    entries[2] = new Microcharts.Entry((whiteWLT[2] + blackWLT[2]))
                     {
                         Label = "Ties",
-                        ValueLabel = wlt[2].ToString(),
+                        ValueLabel = (whiteWLT[2] + blackWLT[2]).ToString(),
                         Color = SKColor.Parse("#AEC6CF")
                     };
 

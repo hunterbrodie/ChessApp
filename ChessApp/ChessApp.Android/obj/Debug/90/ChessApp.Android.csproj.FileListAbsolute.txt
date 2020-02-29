@@ -1,8 +1,5 @@
 C:\Users\Hunter\Documents\GitHub\ChessApp\ChessApp\ChessApp.Android\bin\Debug\ChessApp.Android.dll
 C:\Users\Hunter\Documents\GitHub\ChessApp\ChessApp\ChessApp.Android\bin\Debug\ChessApp.Android.pdb
-C:\Users\Hunter\Documents\GitHub\ChessApp\ChessApp\ChessApp.Android\bin\Debug\com.companyname.chessapp.apk
-C:\Users\Hunter\Documents\GitHub\ChessApp\ChessApp\ChessApp.Android\bin\Debug\com.companyname.chessapp-Signed.aab
-C:\Users\Hunter\Documents\GitHub\ChessApp\ChessApp\ChessApp.Android\bin\Debug\com.companyname.chessapp-Signed.apk
 C:\Users\Hunter\Documents\GitHub\ChessApp\ChessApp\ChessApp.Android\bin\Debug\ChessApp.dll
 C:\Users\Hunter\Documents\GitHub\ChessApp\ChessApp\ChessApp.Android\bin\Debug\ChessApp.pdb
 C:\Users\Hunter\Documents\GitHub\ChessApp\ChessApp\ChessApp.Android\obj\Debug\90\MonoAndroid,Version=v9.0.AssemblyAttributes.cs
@@ -21,10 +18,7 @@ C:\Users\Hunter\Documents\GitHub\ChessApp\ChessApp\ChessApp.Android\obj\Debug\90
 C:\Users\Hunter\Documents\GitHub\ChessApp\ChessApp\ChessApp.Android\obj\Debug\90\ChessApp.Android.csproj.CopyComplete
 C:\Users\Hunter\Documents\GitHub\ChessApp\ChessApp\ChessApp.Android\obj\Debug\90\ChessApp.Android.dll
 C:\Users\Hunter\Documents\GitHub\ChessApp\ChessApp\ChessApp.Android\obj\Debug\90\ChessApp.Android.pdb
-C:\Users\Hunter\Documents\GitHub\ChessApp\ChessApp\ChessApp.Android\obj\Debug\90\android\bin\com.companyname.chessapp.apk
 C:\Users\Hunter\Documents\GitHub\ChessApp\ChessApp\ChessApp.Android\obj\Debug\90\android\bin\base.zip
-C:\Users\Hunter\Documents\GitHub\ChessApp\ChessApp\ChessApp.Android\obj\Debug\90\android\bin\com.companyname.chessapp.aab
-C:\Users\Hunter\Documents\GitHub\ChessApp\ChessApp\ChessApp.Android\obj\Debug\90\android\bin\com.companyname.chessapp.apks
 C:\Users\Hunter\Documents\GitHub\ChessApp\ChessApp\ChessApp.Android\obj\Debug\90\res\layout\tabbar.xml
 C:\Users\Hunter\Documents\GitHub\ChessApp\ChessApp\ChessApp.Android\obj\Debug\90\res\layout\toolbar.xml
 C:\Users\Hunter\Documents\GitHub\ChessApp\ChessApp\ChessApp.Android\obj\Debug\90\res\values\styles.xml
@@ -506,3 +500,10 @@ C:\Users\Hunter\Documents\GitHub\ChessApp\ChessApp\ChessApp.Android\obj\Debug\90
 C:\Users\Hunter\Documents\GitHub\ChessApp\ChessApp\ChessApp.Android\obj\Debug\90\flata\5FE4C6B4941E5FBC.flata
 C:\Users\Hunter\Documents\GitHub\ChessApp\ChessApp\ChessApp.Android\obj\Debug\90\flata\37DC9118643C02EB.flata
 C:\Users\Hunter\Documents\GitHub\ChessApp\ChessApp\ChessApp.Android\obj\Debug\90\flata\C39BFF4D27D05EC7.flata
+C:\Users\Hunter\Documents\GitHub\ChessApp\ChessApp\ChessApp.Android\bin\Debug\com.hunterbrodie.chessapp.apk
+C:\Users\Hunter\Documents\GitHub\ChessApp\ChessApp\ChessApp.Android\bin\Debug\com.hunterbrodie.chessapp-Signed.aab
+C:\Users\Hunter\Documents\GitHub\ChessApp\ChessApp\ChessApp.Android\bin\Debug\com.hunterbrodie.chessapp-Signed.apk
+C:\Users\Hunter\Documents\GitHub\ChessApp\ChessApp\ChessApp.Android\obj\Debug\90\android\bin\com.hunterbrodie.chessapp.apk
+C:\Users\Hunter\Documents\GitHub\ChessApp\ChessApp\ChessApp.Android\obj\Debug\90\android\bin\com.hunterbrodie.chessapp.aab
+C:\Users\Hunter\Documents\GitHub\ChessApp\ChessApp\ChessApp.Android\obj\Debug\90\android\bin\com.hunterbrodie.chessapp.apks
+C:\Users\Hunter\Documents\GitHub\ChessApp\ChessApp\ChessApp.Android\obj\Debug\90\android\src\com\hunterbrodie\chessapp\R.java
