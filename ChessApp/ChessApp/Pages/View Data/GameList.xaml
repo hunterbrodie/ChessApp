@@ -49,7 +49,7 @@
                                     <BoxView Grid.Row="1" Grid.Column="1" HorizontalOptions="FillAndExpand" HeightRequest="1" Color="Gray" />
 
                                     <StackLayout>
-                                        <Label Text="{Binding gDate}" TextColor="Black" FontSize="Medium" VerticalOptions="EndAndExpand"/>
+                                        <Label Text="{Binding shortGDate}" TextColor="Black" FontSize="Medium" VerticalOptions="EndAndExpand"/>
                                     </StackLayout>
 
                                     <StackLayout Orientation="Horizontal" Grid.Column="1">

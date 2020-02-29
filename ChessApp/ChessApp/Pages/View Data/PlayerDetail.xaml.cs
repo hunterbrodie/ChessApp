@@ -17,7 +17,6 @@ namespace ChessApp.Pages.View_Data
     {
         private Player _player;
         private List<Game> _gameList;
-        private int[] wlt = { 0, 0, 0 };
         private int[] whiteWLT = { 0, 0, 0 };
         private int[] blackWLT = { 0, 0, 0 };
 
@@ -343,12 +342,50 @@ namespace ChessApp.Pages.View_Data
                 }
                 else if (GraphType.SelectedItem.ToString().Equals("White/Black Stats"))
                 {
+                    Microcharts.Entry[] entries = new Microcharts.Entry[6];
+                    entries[0] = new Microcharts.Entry(whiteWLT[0])
+                    {
+                        Label = "White Wins",
+                        ValueLabel = whiteWLT[0].ToString(),
+                        Color = SKColor.Parse("#77dd77")
+                    };
+                    entries[1] = new Microcharts.Entry(whiteWLT[1])
+                    {
+                        Label = "White Losses",
+                        ValueLabel = whiteWLT[1].ToString(),
+                        Color = SKColor.Parse("#ff6961")
+                    };
+                    entries[2] = new Microcharts.Entry(whiteWLT[2])
+                    {
+                        Label = "White Ties",
+                        ValueLabel = whiteWLT[2].ToString(),
+                        Color = SKColor.Parse("#AEC6CF")
+                    };
+                    entries[3] = new Microcharts.Entry(blackWLT[0])
+                    {
+                        Label = "Black Wins",
+                        ValueLabel = blackWLT[0].ToString(),
+                        Color = SKColor.Parse("#AEC6CF")
+                    };
+                    entries[4] = new Microcharts.Entry(blackWLT[1])
+                    {
+                        Label = "Black Losses",
+                        ValueLabel = blackWLT[1].ToString(),
+                        Color = SKColor.Parse("#AEC6CF")
+                    };
+                    entries[5] = new Microcharts.Entry(blackWLT[2])
+                    {
+                        Label = "Black Ties",
+                        ValueLabel = blackWLT[2].ToString(),
+                        Color = SKColor.Parse("#AEC6CF")
+                    };
 
+                    playerChartView.Chart = new DonutChart() { Entries = entries, LabelTextSize = 28 };
                 }
                 else
                 {
                     Microcharts.Entry[] entries = new Microcharts.Entry[3];
-                    entries[0] = new Microcharts.Entry(wlt[0])
+                    entries[0] = new Microcharts.Entry(blackWLT[0] + whiteWLT[0])
                     {
                         Label = "Wins",
                         ValueLabel = wlt[0].ToString(),

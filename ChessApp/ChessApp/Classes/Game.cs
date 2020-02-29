@@ -46,6 +46,11 @@ namespace ChessApp.Classes
             set;
         }
 
+        public string shortGDate
+        {
+            get { return gDate.ToShortDateString(); }
+        }
+
         public string Disp
         {
             get

@@ -22,7 +22,7 @@
                     </StackLayout>
                     <Picker x:Name="GraphType" Margin="4" FontSize="Subtitle" Title="Select graph type" SelectedIndexChanged="GraphType_SelectedIndexChanged"/>
                 </StackLayout>
-
+                
                 <microcharts:ChartView x:Name="playerChartView" Grid.Row="1" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" />
 
                 <StackLayout Grid.Row="2">
