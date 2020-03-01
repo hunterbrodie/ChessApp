@@ -56,7 +56,7 @@
                                         <StackLayout>
                                             <Label Text="{Binding shortDisp}" TextColor="Black" FontSize="Medium" VerticalOptions="EndAndExpand"/>
                                         </StackLayout>
-                                        <Image Source="trash.png" HorizontalOptions="EndAndExpand" VerticalOptions="Center" />
+                                        <Image Source="info" HorizontalOptions="EndAndExpand" VerticalOptions="Center" Margin="8" />
                                     </StackLayout>
                                 </Grid>
                             </ViewCell>

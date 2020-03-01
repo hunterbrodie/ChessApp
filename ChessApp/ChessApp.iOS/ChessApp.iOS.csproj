@@ -108,6 +108,15 @@
     <ImageAsset Include="Assets.xcassets\add.png.imageset\Contents.json">
       <Visible>false</Visible>
     </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\info.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\info.imageset\info46.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\info.imageset\info69.png">
+      <Visible>false</Visible>
+    </ImageAsset>
     <ImageAsset Include="Assets.xcassets\trash.png.imageset\Contents.json">
       <Visible>false</Visible>
     </ImageAsset>

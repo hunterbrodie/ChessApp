@@ -507,3 +507,4 @@ C:\Users\Hunter\Documents\GitHub\ChessApp\ChessApp\ChessApp.Android\obj\Debug\90
 C:\Users\Hunter\Documents\GitHub\ChessApp\ChessApp\ChessApp.Android\obj\Debug\90\android\bin\com.hunterbrodie.chessapp.aab
 C:\Users\Hunter\Documents\GitHub\ChessApp\ChessApp\ChessApp.Android\obj\Debug\90\android\bin\com.hunterbrodie.chessapp.apks
 C:\Users\Hunter\Documents\GitHub\ChessApp\ChessApp\ChessApp.Android\obj\Debug\90\android\src\com\hunterbrodie\chessapp\R.java
+C:\Users\Hunter\Documents\GitHub\ChessApp\ChessApp\ChessApp.Android\obj\Debug\90\res\drawable\info.png
