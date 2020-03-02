@@ -5755,7 +5755,7 @@ namespace ChessApp.Droid
 			public const int ic_mtrl_chip_close_circle = 2131165282;
 			
 			// aapt resource value: 0x7F070063
-			public const int info64 = 2131165283;
+			public const int info = 2131165283;
 			
 			// aapt resource value: 0x7F070064
 			public const int mtrl_snackbar_background = 2131165284;

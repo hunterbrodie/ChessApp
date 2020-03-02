@@ -129,3 +129,5 @@ C:\Users\Hunter\Documents\GitHub\ChessApp\ChessApp\ChessApp.iOS\obj\iPhone\Debug
 C:\Users\Hunter\Documents\GitHub\ChessApp\ChessApp\ChessApp.iOS\obj\iPhone\Debug\CopyFilesToMac\ChessApp.iOS.pdb.DebugSymbolsProjectOutputGroupOutput.stamp
 C:\Users\Hunter\Documents\GitHub\ChessApp\ChessApp\ChessApp.iOS\obj\iPhone\Debug\CopyFilesToMac\Entitlements.plist.NoneOutput.stamp
 C:\Users\Hunter\Documents\GitHub\ChessApp\ChessApp\ChessApp.iOS\obj\iPhone\Debug\CopyFilesToMac\Info.plist.NoneOutput.stamp
+C:\Users\Hunter\Documents\GitHub\ChessApp\ChessApp\ChessApp.iOS\obj\iPhone\Debug\info46.png.ResolveUTIs.stamp
+C:\Users\Hunter\Documents\GitHub\ChessApp\ChessApp\ChessApp.iOS\obj\iPhone\Debug\info69.png.ResolveUTIs.stamp
