@@ -131,3 +131,4 @@ C:\Users\Hunter\Documents\GitHub\ChessApp\ChessApp\ChessApp.iOS\obj\iPhoneSimula
 C:\Users\Hunter\Documents\GitHub\ChessApp\ChessApp\ChessApp.iOS\obj\iPhoneSimulator\Debug\info46.png.ResolveUTIs.stamp
 C:\Users\Hunter\Documents\GitHub\ChessApp\ChessApp\ChessApp.iOS\obj\iPhoneSimulator\Debug\info69.png.ResolveUTIs.stamp
 C:\Users\Hunter\Documents\GitHub\ChessApp\ChessApp\ChessApp.iOS\obj\iPhoneSimulator\Debug\ChessApp.iOS.csprojAssemblyReference.cache
+C:\Users\Hunter\Documents\GitHub\ChessApp\ChessApp\ChessApp.iOS\obj\iPhoneSimulator\Debug\ChessApp.iOS.csproj.CoreCompileInputs.cache

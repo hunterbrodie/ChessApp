@@ -127,3 +127,4 @@ C:\Users\Hunter\Documents\GitHub\ChessApp\ChessApp\ChessApp.iOS\obj\iPhone\Relea
 C:\Users\Hunter\Documents\GitHub\ChessApp\ChessApp\ChessApp.iOS\obj\iPhone\Release\CopyFilesToMac\ChessApp.pdb.ReferenceCopyLocalPaths.stamp
 C:\Users\Hunter\Documents\GitHub\ChessApp\ChessApp\ChessApp.iOS\obj\iPhone\Release\CopyFilesToMac\Entitlements.plist.NoneOutput.stamp
 C:\Users\Hunter\Documents\GitHub\ChessApp\ChessApp\ChessApp.iOS\obj\iPhone\Release\CopyFilesToMac\Info.plist.NoneOutput.stamp
+C:\Users\Hunter\Documents\GitHub\ChessApp\ChessApp\ChessApp.iOS\obj\iPhone\Release\ChessApp.iOS.csproj.CoreCompileInputs.cache

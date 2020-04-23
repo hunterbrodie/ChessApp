@@ -8,8 +8,6 @@ C:\Users\Hunter\Documents\GitHub\ChessApp\ChessApp\ChessApp.Android\obj\Debug\90
 C:\Users\Hunter\Documents\GitHub\ChessApp\ChessApp\ChessApp.Android\obj\Debug\90\ChessApp.Android.csprojAssemblyReference.cache
 C:\Users\Hunter\Documents\GitHub\ChessApp\ChessApp\ChessApp.Android\obj\Debug\90\_VerifyXamarinAndroidSupportVersions.stamp
 C:\Users\Hunter\Documents\GitHub\ChessApp\ChessApp\ChessApp.Android\obj\Debug\90\stamp\_BuildLibraryImportsCache.stamp
-C:\Users\Hunter\Documents\GitHub\ChessApp\ChessApp\ChessApp.Android\obj\Debug\90\resourcepaths.cache
-C:\Users\Hunter\Documents\GitHub\ChessApp\ChessApp\ChessApp.Android\obj\Debug\90\resourcecache.stamp
 C:\Users\Hunter\Documents\GitHub\ChessApp\ChessApp\ChessApp.Android\obj\Debug\90\res.flag
 C:\Users\Hunter\Documents\GitHub\ChessApp\ChessApp\ChessApp.Android\obj\Debug\90\flata\compiled.flata
 C:\Users\Hunter\Documents\GitHub\ChessApp\ChessApp\ChessApp.Android\obj\Debug\90\R.txt
@@ -431,7 +429,6 @@ C:\Users\Hunter\Documents\GitHub\ChessApp\ChessApp\ChessApp.Android\obj\Debug\90
 C:\Users\Hunter\Documents\GitHub\ChessApp\ChessApp\ChessApp.Android\obj\Debug\90\android\src\crc64a0e0a82d0db9a07d\TextToSpeechImplementation.java
 C:\Users\Hunter\Documents\GitHub\ChessApp\ChessApp\ChessApp.Android\obj\Debug\90\android\src\crc64b1226c731a2261a2\MainActivity.java
 C:\Users\Hunter\Documents\GitHub\ChessApp\ChessApp\ChessApp.Android\obj\Debug\90\android\bin\packaged_resources
-C:\Users\Hunter\Documents\GitHub\ChessApp\ChessApp\ChessApp.Android\obj\Debug\90\android\src\com\companyname\chessapp\R.java
 C:\Users\Hunter\Documents\GitHub\ChessApp\ChessApp\ChessApp.Android\obj\Debug\90\android\typemap.jm.arm64-v8a.o
 C:\Users\Hunter\Documents\GitHub\ChessApp\ChessApp\ChessApp.Android\obj\Debug\90\android\typemap.mj.arm64-v8a.o
 C:\Users\Hunter\Documents\GitHub\ChessApp\ChessApp\ChessApp.Android\obj\Debug\90\android\typemap.jm.armeabi-v7a.o
@@ -508,3 +505,6 @@ C:\Users\Hunter\Documents\GitHub\ChessApp\ChessApp\ChessApp.Android\obj\Debug\90
 C:\Users\Hunter\Documents\GitHub\ChessApp\ChessApp\ChessApp.Android\obj\Debug\90\android\bin\com.hunterbrodie.chessapp.apks
 C:\Users\Hunter\Documents\GitHub\ChessApp\ChessApp\ChessApp.Android\obj\Debug\90\android\src\com\hunterbrodie\chessapp\R.java
 C:\Users\Hunter\Documents\GitHub\ChessApp\ChessApp\ChessApp.Android\obj\Debug\90\res\drawable\info.png
+C:\Users\Hunter\Documents\GitHub\ChessApp\ChessApp\ChessApp.Android\bin\Debug\com.hunterbrodie.chessapp.aab
+C:\Users\Hunter\Documents\GitHub\ChessApp\ChessApp\ChessApp.Android\obj\Debug\90\ChessApp.Android.csproj.CoreCompileInputs.cache
+C:\Users\Hunter\Documents\GitHub\ChessApp\ChessApp\ChessApp.Android\obj\Debug\90\android\AndroidManifest.xml

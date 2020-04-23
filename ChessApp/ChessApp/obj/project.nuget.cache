@@ -1,0 +1,23 @@
+{
+  "version": 2,
+  "dgSpecHash": "vf3ISo4z/anmTtwkQy72xF4gsAPBFu2WhoAs+O6td8oktH/p64+I82EA1F4Mp1Y9hciZBzZ2588BdQURQdnRfw==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Hunter\\Documents\\GitHub\\ChessApp\\ChessApp\\ChessApp\\ChessApp.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Hunter\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Users\\Hunter\\.nuget\\packages\\moneyfox.microcharts\\1.1.0.1\\moneyfox.microcharts.1.1.0.1.nupkg.sha512",
+    "C:\\Users\\Hunter\\.nuget\\packages\\moneyfox.microcharts.forms\\1.1.0.1\\moneyfox.microcharts.forms.1.1.0.1.nupkg.sha512",
+    "C:\\Users\\Hunter\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512",
+    "C:\\Users\\Hunter\\.nuget\\packages\\skiasharp\\1.59.1\\skiasharp.1.59.1.nupkg.sha512",
+    "C:\\Users\\Hunter\\.nuget\\packages\\skiasharp.views.forms\\1.59.1.1\\skiasharp.views.forms.1.59.1.1.nupkg.sha512",
+    "C:\\Users\\Hunter\\.nuget\\packages\\sqlite-net-pcl\\1.6.292\\sqlite-net-pcl.1.6.292.nupkg.sha512",
+    "C:\\Users\\Hunter\\.nuget\\packages\\sqlitepclraw.bundle_green\\1.1.13\\sqlitepclraw.bundle_green.1.1.13.nupkg.sha512",
+    "C:\\Users\\Hunter\\.nuget\\packages\\sqlitepclraw.core\\1.1.13\\sqlitepclraw.core.1.1.13.nupkg.sha512",
+    "C:\\Users\\Hunter\\.nuget\\packages\\stylecop.msbuild\\5.0.0\\stylecop.msbuild.5.0.0.nupkg.sha512",
+    "C:\\Users\\Hunter\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512",
+    "C:\\Users\\Hunter\\.nuget\\packages\\system.valuetuple\\4.4.0\\system.valuetuple.4.4.0.nupkg.sha512",
+    "C:\\Microsoft\\Xamarin\\NuGet\\xamarin.essentials\\1.3.1\\xamarin.essentials.1.3.1.nupkg.sha512",
+    "C:\\Users\\Hunter\\.nuget\\packages\\xamarin.forms\\4.3.0.908675\\xamarin.forms.4.3.0.908675.nupkg.sha512"
+  ],
+  "logs": []
+}
